@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		LICENSE = LICENSE
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJKConverter", "EJKConverter\EJKConverter.csproj", "{8FDA3ED9-E849-45A7-A639-2620AAEC4A5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +22,10 @@ Global
 		{DBC41037-FE70-4C1F-B33C-B2D322A6840D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBC41037-FE70-4C1F-B33C-B2D322A6840D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBC41037-FE70-4C1F-B33C-B2D322A6840D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDA3ED9-E849-45A7-A639-2620AAEC4A5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDA3ED9-E849-45A7-A639-2620AAEC4A5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDA3ED9-E849-45A7-A639-2620AAEC4A5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDA3ED9-E849-45A7-A639-2620AAEC4A5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
