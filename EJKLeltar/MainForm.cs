@@ -16,7 +16,6 @@ namespace EJKLeltar
 	{
 		// Data
 		public XmlDocument Document;
-
 		private bool _changed = false;
 		private XmlElement _selected;
 
@@ -24,6 +23,7 @@ namespace EJKLeltar
 		private AboutForm _aboutForm;
 		private EditForm _editForm;
 		private SettingsForm _settingsForm;
+		private ChangeQuantityForm _changeForm;
 
 		public MainForm()
 		{
@@ -31,16 +31,43 @@ namespace EJKLeltar
 			_aboutForm = new AboutForm();
 			_editForm = new EditForm(this);
 			_settingsForm = new SettingsForm(this);
-
+			_changeForm = new ChangeQuantityForm();
 
 			InitializeComponent();
+
+			// Load settings
+			Size = Properties.Settings.Default.WindowSize;
+			WindowState = Properties.Settings.Default.WindowMaximized ? FormWindowState.Maximized : FormWindowState.Normal;
+			if (Properties.Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath))
+			{
+				_loadFile();
+			}
 		}
 
 		// Set _changed and form title
 		public void SetChanged(bool changed)
 		{
 			_changed = changed;
-			Text = $"Leltár {(_changed ? "* " : "")} - {Properties.Settings.Default.FilePath}";
+			Text = $"{(_changed ? "* " : "")}Leltár - {(string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath) ? "Üres dokumentum" : Properties.Settings.Default.FilePath)}";
+		}
+
+		// Enable or disable buttons
+		public void SetActive(bool active)
+		{
+			borrowButton.Enabled = active;
+			returnButton.Enabled = active;
+			editButton.Enabled = active;
+			deleteButton.Enabled = active;
+			addButton.Enabled = active;
+		}
+
+		// Set shortcut keys
+		public void SetShortcuts()
+		{
+			newBookToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
+			editBookToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
+			borrowToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.K;
+			returnToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
 		}
 
 		// Display book data
@@ -50,6 +77,7 @@ namespace EJKLeltar
 			{
 				titleText.Text = e["Title"].InnerText;
 				idText.Text = e["ID"].InnerText;
+				subjectText.Text = e["Subject"].InnerText;
 				int count = int.Parse(e["Count"].InnerText);
 				int outCount = int.Parse(e["Out"].InnerText);
 				int inCount = count - outCount;
@@ -63,6 +91,7 @@ namespace EJKLeltar
 			{
 				titleText.Text = "Cím";
 				idText.Text = "Azonosító";
+				subjectText.Text = "Szakma";
 				inText.Text = "";
 				outText.Text = "";
 				totalText.Text = "";
@@ -73,16 +102,10 @@ namespace EJKLeltar
 		// Load XML doc
 		private void _loadFile()
 		{
-			try
-			{
-				Document.Load(Properties.Settings.Default.FilePath);
-				SetChanged(false);
-				_populateList();
-			}
-			catch (Exception ex)
-			{
-				MessageBox.Show(ex.ToString());
-			}
+			Document = new XmlDocument();
+			Document.Load(Properties.Settings.Default.FilePath);
+			SetChanged(false);
+			_populateList();
 		}
 
 		// Save XML doc
@@ -95,7 +118,7 @@ namespace EJKLeltar
 			}
 			catch (Exception ex)
 			{
-				MessageBox.Show(ex.ToString());
+				throw ex;
 			}
 		}
 
@@ -104,12 +127,14 @@ namespace EJKLeltar
 		{
 			mainList.Items.Clear();
 			mainList.SelectedIndices.Clear();
-			foreach(XmlElement n in Document.DocumentElement.ChildNodes.OfType<XmlElement>())
+			foreach (XmlElement n in Document.DocumentElement.ChildNodes.OfType<XmlElement>())
 			{
+				// Get relevant fields
 				string code = n["ID"].InnerText;
-				string title = n["Title"].InnerText; 
+				string title = n["Title"].InnerText;
 
-				if(string.IsNullOrEmpty(searchText.Text) || (code.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant()) || title.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant())))
+				// Add main list items
+				if (string.IsNullOrEmpty(searchText.Text) || (code.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant()) || title.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant())))
 				{
 					ListViewItem item = new ListViewItem(code);
 					item.SubItems.Add(new ListViewItem.ListViewSubItem(item, title));
@@ -125,7 +150,7 @@ namespace EJKLeltar
 			if (string.IsNullOrEmpty(Properties.Settings.Default.LastDir))
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-			if (Properties.Settings.Default.OpenLast)
+			if (Properties.Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath))
 			{
 				_loadFile();
 			}
@@ -136,6 +161,9 @@ namespace EJKLeltar
 				Document.AppendChild(Document.CreateElement("Inventory"));
 				_populateList();
 			}
+			SetChanged(false);
+			_selected = null;
+			SetActive(false);
 		}
 
 		// Search
@@ -151,7 +179,10 @@ namespace EJKLeltar
 			{
 				_selected = Document.DocumentElement.ChildNodes.OfType<XmlElement>().Single(n => n["ID"].InnerText == e.Item.Text);
 				_displayEntry(_selected);
+				SetActive(true);
 			}
+			else
+				SetActive(false);
 		}
 
 		// Click on list
@@ -169,16 +200,28 @@ namespace EJKLeltar
 		// New document
 		private void newFileToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			Properties.Settings.Default.FilePath = string.Empty;
+			if (_changed)
+			{
+				DialogResult res = MessageBox.Show("save?", "save?", MessageBoxButtons.YesNoCancel);
+				if (res == DialogResult.Yes)
+					saveToolStripMenuItem_Click(sender, e);
+				else if (res == DialogResult.Cancel)
+					return;
+			}
+			Properties.Settings.Default.FilePath = "";
 			Document = new XmlDocument();
+			Document.AppendChild(Document.CreateXmlDeclaration("1.0", "utf-8", null));
 			Document.AppendChild(Document.CreateElement("Inventory"));
+			SetChanged(false);
+			_selected = null;
+			SetActive(false);
 			_populateList();
 		}
 
 		// Open document
 		private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if(_changed)
+			if (_changed)
 			{
 				DialogResult res = MessageBox.Show("save?", "save?", MessageBoxButtons.YesNoCancel);
 				if (res == DialogResult.Yes)
@@ -198,6 +241,8 @@ namespace EJKLeltar
 				Properties.Settings.Default.FilePath = d.FileName;
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
 				_loadFile();
+				_selected = null;
+				SetActive(false);
 			}
 			d.Dispose();
 		}
@@ -205,7 +250,7 @@ namespace EJKLeltar
 		// Save document
 		private void saveToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if(string.IsNullOrEmpty(Properties.Settings.Default.FilePath))
+			if (string.IsNullOrEmpty(Properties.Settings.Default.FilePath))
 			{
 				saveAsToolStripMenuItem_Click(sender, e);
 			}
@@ -220,12 +265,12 @@ namespace EJKLeltar
 		{
 			SaveFileDialog d = new SaveFileDialog()
 			{
-				InitialDirectory = Path.GetDirectoryName(Properties.Settings.Default.FilePath),
+				InitialDirectory = Path.GetDirectoryName(Properties.Settings.Default.LastDir),
 				Filter = "XML fájl|*.xml|Minden fájl|*.*",
 				DefaultExt = "xml",
 				Title = "Mentés másként"
 			};
-			if(d.ShowDialog() == DialogResult.OK)
+			if (d.ShowDialog() == DialogResult.OK)
 			{
 				Properties.Settings.Default.FilePath = d.FileName;
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
@@ -253,18 +298,21 @@ namespace EJKLeltar
 					return;
 				}
 			}
+			Properties.Settings.Default.WindowSize = Size;
+			Properties.Settings.Default.WindowMaximized = WindowState == FormWindowState.Maximized;
 			Properties.Settings.Default.Save();
 		}
 
 		// New book
 		private void newBookToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if(_editForm.ShowDialog(Document) == DialogResult.OK)
+			if (_editForm.ShowDialog(Document) == DialogResult.OK)
 			{
 				Document.DocumentElement.AppendChild(_editForm.Element);
 				SetChanged(true);
 				_populateList();
 				mainList.SelectedIndices.Add(mainList.Items.Count - 1);
+				mainList.EnsureVisible(mainList.SelectedIndices[0]);
 			}
 		}
 
@@ -278,23 +326,39 @@ namespace EJKLeltar
 		// Borrow book
 		private void borrowButton_Click(object sender, EventArgs e)
 		{
-			titleText.Text = _selected["ID"].InnerText;
-			SetChanged(true);
+			if (_selected == null)
+				return;
+			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Borrow) == DialogResult.OK)
+				SetChanged(true);
+			_displayEntry(_selected);
 		}
 
 		// Return book
 		private void returnButton_Click(object sender, EventArgs e)
 		{
+			if (_selected == null)
+				return;
+			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Return) == DialogResult.OK)
+				SetChanged(true);
+			_displayEntry(_selected);
+		}
 
+		// Add books
+		private void addButton_Click(object sender, EventArgs e)
+		{
+			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Add) == DialogResult.OK)
+				SetChanged(true);
+			_displayEntry(_selected);
 		}
 
 		// Delete book
 		private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
 		{
-			if(MessageBox.Show($"A kiválasztott bejegyzés véglegesen törölve lesz:\n\n{_selected["Title"].InnerText}\n{_selected["ID"].InnerText}", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+			if (MessageBox.Show($"A kiválasztott bejegyzés véglegesen törölve lesz:\n\n{_selected["Title"].InnerText}\n{_selected["ID"].InnerText}", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 			{
 				Document.DocumentElement.RemoveChild(_selected);
 				_populateList();
+				SetChanged(true);
 			}
 		}
 
@@ -311,6 +375,27 @@ namespace EJKLeltar
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			_aboutForm.ShowDialog();
+		}
+
+		// Ctrl + F
+		private void MainForm_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (!e.Handled)
+			{
+				if (e.Modifiers == Keys.Control && e.KeyCode == Keys.F)
+				{
+					searchText.Focus();
+				}
+		}
+	}
+
+		// Search text return
+		private void searchText_KeyDown(object sender, KeyEventArgs e)
+		{
+			if(e.KeyCode == Keys.Return)
+			{
+				searchButton_Click(sender, e);
+			}
 		}
 	}
 }

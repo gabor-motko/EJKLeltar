@@ -33,7 +33,7 @@
 			this.changeNumber = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.titleText = new System.Windows.Forms.TextBox();
 			this.availableLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.changeNumber)).BeginInit();
 			this.SuspendLayout();
@@ -48,6 +48,7 @@
 			this.cancelButton.TabIndex = 0;
 			this.cancelButton.Text = "Cancel";
 			this.cancelButton.UseVisualStyleBackColor = true;
+			this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
 			// 
 			// okButton
 			// 
@@ -90,15 +91,15 @@
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Hány darabot?";
 			// 
-			// textBox1
+			// titleText
 			// 
-			this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.titleText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox1.Location = new System.Drawing.Point(58, 6);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.ReadOnly = true;
-			this.textBox1.Size = new System.Drawing.Size(288, 20);
-			this.textBox1.TabIndex = 3;
+			this.titleText.Location = new System.Drawing.Point(58, 6);
+			this.titleText.Name = "titleText";
+			this.titleText.ReadOnly = true;
+			this.titleText.Size = new System.Drawing.Size(288, 20);
+			this.titleText.TabIndex = 3;
 			// 
 			// availableLabel
 			// 
@@ -117,7 +118,7 @@
 			this.CancelButton = this.cancelButton;
 			this.ClientSize = new System.Drawing.Size(358, 142);
 			this.Controls.Add(this.availableLabel);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.titleText);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.changeNumber);
@@ -130,6 +131,7 @@
 			this.ShowIcon = false;
 			this.ShowInTaskbar = false;
 			this.Text = "ChangeQuantityForm";
+			this.Shown += new System.EventHandler(this.ChangeQuantityForm_Shown);
 			((System.ComponentModel.ISupportInitialize)(this.changeNumber)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
@@ -143,7 +145,7 @@
 		private System.Windows.Forms.NumericUpDown changeNumber;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox titleText;
 		private System.Windows.Forms.Label availableLabel;
 	}
 }

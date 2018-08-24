@@ -41,6 +41,8 @@
 			this.label5 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.outNumber = new System.Windows.Forms.NumericUpDown();
+			this.subjectDrop = new System.Windows.Forms.ComboBox();
+			this.label7 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.countNumber)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.outNumber)).BeginInit();
 			this.SuspendLayout();
@@ -66,7 +68,7 @@
 			// 
 			this.idText.Location = new System.Drawing.Point(82, 38);
 			this.idText.Name = "idText";
-			this.idText.Size = new System.Drawing.Size(308, 20);
+			this.idText.Size = new System.Drawing.Size(117, 20);
 			this.idText.TabIndex = 0;
 			// 
 			// label2
@@ -124,7 +126,7 @@
 			// 
 			this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.cancelButton.Location = new System.Drawing.Point(294, 202);
+			this.cancelButton.Location = new System.Drawing.Point(294, 203);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(96, 23);
 			this.cancelButton.TabIndex = 3;
@@ -135,7 +137,7 @@
 			// okButton
 			// 
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.Location = new System.Drawing.Point(192, 202);
+			this.okButton.Location = new System.Drawing.Point(192, 203);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(96, 23);
 			this.okButton.TabIndex = 3;
@@ -173,13 +175,33 @@
 			this.outNumber.Size = new System.Drawing.Size(79, 20);
 			this.outNumber.TabIndex = 2;
 			// 
+			// subjectDrop
+			// 
+			this.subjectDrop.FormattingEnabled = true;
+			this.subjectDrop.Location = new System.Drawing.Point(273, 38);
+			this.subjectDrop.Name = "subjectDrop";
+			this.subjectDrop.Size = new System.Drawing.Size(117, 21);
+			this.subjectDrop.TabIndex = 4;
+			// 
+			// label7
+			// 
+			this.label7.AutoSize = true;
+			this.label7.Location = new System.Drawing.Point(222, 41);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(45, 13);
+			this.label7.TabIndex = 5;
+			this.label7.Text = "Szakma";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+			// 
 			// EditForm
 			// 
 			this.AcceptButton = this.okButton;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.cancelButton;
-			this.ClientSize = new System.Drawing.Size(402, 237);
+			this.ClientSize = new System.Drawing.Size(402, 238);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.subjectDrop);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.cancelButton);
 			this.Controls.Add(this.outNumber);
@@ -220,5 +242,7 @@
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.NumericUpDown outNumber;
+		private System.Windows.Forms.ComboBox subjectDrop;
+		private System.Windows.Forms.Label label7;
 	}
 }

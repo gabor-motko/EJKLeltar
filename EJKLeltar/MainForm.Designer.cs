@@ -56,6 +56,8 @@
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+			this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,15 +73,19 @@
 			this.inText = new System.Windows.Forms.TextBox();
 			this.outText = new System.Windows.Forms.TextBox();
 			this.operationGroup = new System.Windows.Forms.GroupBox();
+			this.deleteButton = new System.Windows.Forms.Button();
+			this.addButton = new System.Windows.Forms.Button();
+			this.editButton = new System.Windows.Forms.Button();
 			this.returnButton = new System.Windows.Forms.Button();
 			this.borrowButton = new System.Windows.Forms.Button();
 			this.searchButton = new System.Windows.Forms.Button();
 			this.commentText = new System.Windows.Forms.TextBox();
-			this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-			this.editButton = new System.Windows.Forms.Button();
-			this.addButton = new System.Windows.Forms.Button();
-			this.deleteButton = new System.Windows.Forms.Button();
+			this.subjectDrop = new System.Windows.Forms.ComboBox();
+			this.label5 = new System.Windows.Forms.Label();
+			this.subjectText = new System.Windows.Forms.TextBox();
+			this.borrowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.returnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.mainListContextMenu.SuspendLayout();
 			this.mainMenuStrip.SuspendLayout();
 			this.quantityGroup.SuspendLayout();
@@ -184,8 +190,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.searchText.Location = new System.Drawing.Point(12, 27);
 			this.searchText.Name = "searchText";
-			this.searchText.Size = new System.Drawing.Size(238, 20);
+			this.searchText.Size = new System.Drawing.Size(168, 20);
 			this.searchText.TabIndex = 1;
+			this.searchText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchText_KeyDown);
 			// 
 			// mainMenuStrip
 			// 
@@ -210,7 +217,7 @@
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-			this.fileToolStripMenuItem.Text = "Fájl";
+			this.fileToolStripMenuItem.Text = "&Fájl";
 			// 
 			// newFileToolStripMenuItem
 			// 
@@ -261,13 +268,16 @@
 			this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newBookToolStripMenuItem,
             this.editBookToolStripMenuItem,
+            this.toolStripSeparator6,
+            this.borrowToolStripMenuItem1,
+            this.returnToolStripMenuItem1,
             this.toolStripSeparator5,
             this.deleteToolStripMenuItem1,
             this.toolStripSeparator2,
             this.settingsToolStripMenuItem});
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
 			this.editToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-			this.editToolStripMenuItem.Text = "Szerkesztés";
+			this.editToolStripMenuItem.Text = "Sz&erkesztés";
 			// 
 			// newBookToolStripMenuItem
 			// 
@@ -283,6 +293,18 @@
 			this.editBookToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
 			this.editBookToolStripMenuItem.Text = "Kiválasztott könyv szerkesztése...";
 			this.editBookToolStripMenuItem.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator5
+			// 
+			this.toolStripSeparator5.Name = "toolStripSeparator5";
+			this.toolStripSeparator5.Size = new System.Drawing.Size(241, 6);
+			// 
+			// deleteToolStripMenuItem1
+			// 
+			this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
+			this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+			this.deleteToolStripMenuItem1.Text = "Kiválasztott könyv törlése";
+			this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
 			// 
 			// toolStripSeparator2
 			// 
@@ -302,24 +324,26 @@
             this.aboutToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-			this.helpToolStripMenuItem.Text = "Súgó";
+			this.helpToolStripMenuItem.Text = "Súg&ó";
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.aboutToolStripMenuItem.Text = "Névjegy";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
 			// titleText
 			// 
 			this.titleText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.titleText.BackColor = System.Drawing.SystemColors.Window;
 			this.titleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.titleText.Location = new System.Drawing.Point(359, 27);
 			this.titleText.Multiline = true;
 			this.titleText.Name = "titleText";
+			this.titleText.ReadOnly = true;
 			this.titleText.Size = new System.Drawing.Size(413, 68);
-			this.titleText.TabIndex = 3;
+			this.titleText.TabIndex = 5;
 			this.titleText.Text = "Cím";
 			// 
 			// label1
@@ -335,11 +359,13 @@
 			// idText
 			// 
 			this.idText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.idText.BackColor = System.Drawing.SystemColors.Window;
 			this.idText.Location = new System.Drawing.Point(495, 101);
 			this.idText.Name = "idText";
+			this.idText.ReadOnly = true;
 			this.idText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.idText.Size = new System.Drawing.Size(277, 20);
-			this.idText.TabIndex = 5;
+			this.idText.TabIndex = 6;
 			this.idText.Text = "Azonosító";
 			// 
 			// quantityGroup
@@ -351,10 +377,10 @@
 			this.quantityGroup.Controls.Add(this.totalText);
 			this.quantityGroup.Controls.Add(this.inText);
 			this.quantityGroup.Controls.Add(this.outText);
-			this.quantityGroup.Location = new System.Drawing.Point(359, 127);
+			this.quantityGroup.Location = new System.Drawing.Point(359, 153);
 			this.quantityGroup.Name = "quantityGroup";
 			this.quantityGroup.Size = new System.Drawing.Size(413, 79);
-			this.quantityGroup.TabIndex = 6;
+			this.quantityGroup.TabIndex = 8;
 			this.quantityGroup.TabStop = false;
 			this.quantityGroup.Text = "Darab";
 			// 
@@ -387,22 +413,28 @@
 			// 
 			// totalText
 			// 
+			this.totalText.BackColor = System.Drawing.SystemColors.Window;
 			this.totalText.Location = new System.Drawing.Point(285, 53);
 			this.totalText.Name = "totalText";
+			this.totalText.ReadOnly = true;
 			this.totalText.Size = new System.Drawing.Size(96, 20);
 			this.totalText.TabIndex = 0;
 			// 
 			// inText
 			// 
+			this.inText.BackColor = System.Drawing.SystemColors.Window;
 			this.inText.Location = new System.Drawing.Point(31, 53);
 			this.inText.Name = "inText";
+			this.inText.ReadOnly = true;
 			this.inText.Size = new System.Drawing.Size(96, 20);
 			this.inText.TabIndex = 0;
 			// 
 			// outText
 			// 
+			this.outText.BackColor = System.Drawing.SystemColors.Window;
 			this.outText.Location = new System.Drawing.Point(158, 53);
 			this.outText.Name = "outText";
+			this.outText.ReadOnly = true;
 			this.outText.Size = new System.Drawing.Size(96, 20);
 			this.outText.TabIndex = 0;
 			// 
@@ -414,12 +446,42 @@
 			this.operationGroup.Controls.Add(this.editButton);
 			this.operationGroup.Controls.Add(this.returnButton);
 			this.operationGroup.Controls.Add(this.borrowButton);
-			this.operationGroup.Location = new System.Drawing.Point(359, 212);
+			this.operationGroup.Location = new System.Drawing.Point(359, 238);
 			this.operationGroup.Name = "operationGroup";
 			this.operationGroup.Size = new System.Drawing.Size(413, 126);
-			this.operationGroup.TabIndex = 7;
+			this.operationGroup.TabIndex = 4;
 			this.operationGroup.TabStop = false;
 			this.operationGroup.Text = "Műveletek";
+			// 
+			// deleteButton
+			// 
+			this.deleteButton.Location = new System.Drawing.Point(281, 97);
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.Size = new System.Drawing.Size(125, 23);
+			this.deleteButton.TabIndex = 4;
+			this.deleteButton.Text = "Törlés";
+			this.deleteButton.UseVisualStyleBackColor = true;
+			this.deleteButton.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+			// 
+			// addButton
+			// 
+			this.addButton.Location = new System.Drawing.Point(146, 97);
+			this.addButton.Name = "addButton";
+			this.addButton.Size = new System.Drawing.Size(125, 23);
+			this.addButton.TabIndex = 3;
+			this.addButton.Text = "Leltárba vétel";
+			this.addButton.UseVisualStyleBackColor = true;
+			this.addButton.Click += new System.EventHandler(this.addButton_Click);
+			// 
+			// editButton
+			// 
+			this.editButton.Location = new System.Drawing.Point(11, 97);
+			this.editButton.Name = "editButton";
+			this.editButton.Size = new System.Drawing.Size(125, 23);
+			this.editButton.TabIndex = 2;
+			this.editButton.Text = "Módosítás";
+			this.editButton.UseVisualStyleBackColor = true;
+			this.editButton.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
 			// 
 			// returnButton
 			// 
@@ -427,7 +489,7 @@
 			this.returnButton.Location = new System.Drawing.Point(220, 19);
 			this.returnButton.Name = "returnButton";
 			this.returnButton.Size = new System.Drawing.Size(187, 33);
-			this.returnButton.TabIndex = 0;
+			this.returnButton.TabIndex = 1;
 			this.returnButton.Text = "Visszavétel";
 			this.returnButton.UseVisualStyleBackColor = true;
 			this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
@@ -445,10 +507,11 @@
 			// 
 			// searchButton
 			// 
-			this.searchButton.Location = new System.Drawing.Point(256, 25);
+			this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.searchButton.Location = new System.Drawing.Point(276, 25);
 			this.searchButton.Name = "searchButton";
-			this.searchButton.Size = new System.Drawing.Size(97, 23);
-			this.searchButton.TabIndex = 1;
+			this.searchButton.Size = new System.Drawing.Size(77, 23);
+			this.searchButton.TabIndex = 3;
 			this.searchButton.Text = "Keresés";
 			this.searchButton.UseVisualStyleBackColor = true;
 			this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
@@ -457,63 +520,77 @@
 			// 
 			this.commentText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.commentText.Location = new System.Drawing.Point(362, 344);
+			this.commentText.BackColor = System.Drawing.SystemColors.Window;
+			this.commentText.Location = new System.Drawing.Point(359, 370);
 			this.commentText.Multiline = true;
 			this.commentText.Name = "commentText";
-			this.commentText.Size = new System.Drawing.Size(410, 106);
-			this.commentText.TabIndex = 8;
+			this.commentText.ReadOnly = true;
+			this.commentText.Size = new System.Drawing.Size(410, 80);
+			this.commentText.TabIndex = 9;
 			this.commentText.Text = "Megjegyzés";
 			// 
-			// deleteToolStripMenuItem1
+			// subjectDrop
 			// 
-			this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-			this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
-			this.deleteToolStripMenuItem1.Text = "Kiválasztott könyv törlése";
-			this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+			this.subjectDrop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.subjectDrop.FormattingEnabled = true;
+			this.subjectDrop.Location = new System.Drawing.Point(186, 27);
+			this.subjectDrop.Name = "subjectDrop";
+			this.subjectDrop.Size = new System.Drawing.Size(84, 21);
+			this.subjectDrop.TabIndex = 2;
 			// 
-			// toolStripSeparator5
+			// label5
 			// 
-			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(241, 6);
+			this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.label5.AutoSize = true;
+			this.label5.Location = new System.Drawing.Point(359, 130);
+			this.label5.Name = "label5";
+			this.label5.Size = new System.Drawing.Size(45, 13);
+			this.label5.TabIndex = 4;
+			this.label5.Text = "Szakma";
 			// 
-			// editButton
+			// subjectText
 			// 
-			this.editButton.Location = new System.Drawing.Point(11, 97);
-			this.editButton.Name = "editButton";
-			this.editButton.Size = new System.Drawing.Size(125, 23);
-			this.editButton.TabIndex = 1;
-			this.editButton.Text = "Módosítás";
-			this.editButton.UseVisualStyleBackColor = true;
-			this.editButton.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
+			this.subjectText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.subjectText.BackColor = System.Drawing.SystemColors.Window;
+			this.subjectText.Location = new System.Drawing.Point(495, 127);
+			this.subjectText.Name = "subjectText";
+			this.subjectText.ReadOnly = true;
+			this.subjectText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+			this.subjectText.Size = new System.Drawing.Size(277, 20);
+			this.subjectText.TabIndex = 7;
+			this.subjectText.Text = "Szakma";
 			// 
-			// addButton
+			// borrowToolStripMenuItem1
 			// 
-			this.addButton.Location = new System.Drawing.Point(146, 97);
-			this.addButton.Name = "addButton";
-			this.addButton.Size = new System.Drawing.Size(125, 23);
-			this.addButton.TabIndex = 1;
-			this.addButton.Text = "Leltárba vétel";
-			this.addButton.UseVisualStyleBackColor = true;
+			this.borrowToolStripMenuItem1.Name = "borrowToolStripMenuItem1";
+			this.borrowToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+			this.borrowToolStripMenuItem1.Text = "Kikölcsönzés";
+			this.borrowToolStripMenuItem1.Click += new System.EventHandler(this.borrowButton_Click);
 			// 
-			// deleteButton
+			// returnToolStripMenuItem1
 			// 
-			this.deleteButton.Location = new System.Drawing.Point(281, 97);
-			this.deleteButton.Name = "deleteButton";
-			this.deleteButton.Size = new System.Drawing.Size(125, 23);
-			this.deleteButton.TabIndex = 1;
-			this.deleteButton.Text = "Törlés";
-			this.deleteButton.UseVisualStyleBackColor = true;
-			this.deleteButton.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+			this.returnToolStripMenuItem1.Name = "returnToolStripMenuItem1";
+			this.returnToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+			this.returnToolStripMenuItem1.Text = "Visszavétel";
+			this.returnToolStripMenuItem1.Click += new System.EventHandler(this.returnButton_Click);
+			// 
+			// toolStripSeparator6
+			// 
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(241, 6);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(784, 462);
+			this.Controls.Add(this.subjectDrop);
 			this.Controls.Add(this.commentText);
 			this.Controls.Add(this.searchButton);
 			this.Controls.Add(this.operationGroup);
 			this.Controls.Add(this.quantityGroup);
+			this.Controls.Add(this.subjectText);
+			this.Controls.Add(this.label5);
 			this.Controls.Add(this.idText);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.titleText);
@@ -521,12 +598,14 @@
 			this.Controls.Add(this.mainList);
 			this.Controls.Add(this.mainMenuStrip);
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.KeyPreview = true;
 			this.MainMenuStrip = this.mainMenuStrip;
 			this.MinimumSize = new System.Drawing.Size(800, 500);
 			this.Name = "MainForm";
 			this.Text = "Leltár";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
 			this.mainListContextMenu.ResumeLayout(false);
 			this.mainMenuStrip.ResumeLayout(false);
 			this.mainMenuStrip.PerformLayout();
@@ -587,6 +666,12 @@
 		private System.Windows.Forms.Button deleteButton;
 		private System.Windows.Forms.Button addButton;
 		private System.Windows.Forms.Button editButton;
+		private System.Windows.Forms.ComboBox subjectDrop;
+		private System.Windows.Forms.Label label5;
+		private System.Windows.Forms.TextBox subjectText;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+		private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem1;
 	}
 }
 
