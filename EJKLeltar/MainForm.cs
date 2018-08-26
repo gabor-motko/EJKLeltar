@@ -15,7 +15,7 @@ namespace EJKLeltar
 	public partial class MainForm : Form
 	{
 		// Data
-		public XmlDocument Document;
+		private XmlDocument _document;
 		private bool _changed = false;
 		private XmlElement _selected;
 		private HashSet<string> _ids;
@@ -62,7 +62,7 @@ namespace EJKLeltar
 		}
 		
 		// Display book data
-		private void _displayEntry(XmlElement e)
+		private void DisplayEntry(XmlElement e)
 		{
 			try
 			{
@@ -95,20 +95,20 @@ namespace EJKLeltar
 			{
 				if (MessageBox.Show("A kijelölt bejegyzés egyik mezője hiányzik. Törlöd?", "Hiba", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
 				{
-					Document.DocumentElement.RemoveChild(_selected);
+					_document.DocumentElement.RemoveChild(_selected);
 					_selected = null;
-					_populateList();
+					PopulateList();
 				}
 			}
 		}
 
 		// Load XML doc
-		private void _loadFile()
+		private void LoadFile()
 		{
-			Document = new XmlDocument();
-			Document.Load(Properties.Settings.Default.FilePath);
+			_document = new XmlDocument();
+			_document.Load(Properties.Settings.Default.FilePath);
 			SetChanged(false);
-			_populateList();
+			PopulateList();
 		}
 
 		// Make backups
@@ -118,7 +118,7 @@ namespace EJKLeltar
 		}
 
 		// Save XML doc
-		private void _saveFile()
+		private void SaveFile()
 		{
 			try
 			{
@@ -132,7 +132,7 @@ namespace EJKLeltar
 				}
 
 				// Save
-				Document.Save(Properties.Settings.Default.FilePath);
+				_document.Save(Properties.Settings.Default.FilePath);
 				SetChanged(false);
 			}
 			catch (Exception ex)
@@ -142,12 +142,12 @@ namespace EJKLeltar
 		}
 
 		// Read, filter and display XmlElements
-		private void _populateList()
+		private void PopulateList()
 		{
 			_ids.Clear();
 			mainList.Items.Clear();
 			mainList.SelectedIndices.Clear();
-			foreach (XmlElement n in Document.DocumentElement.ChildNodes.OfType<XmlElement>())
+			foreach (XmlElement n in _document.DocumentElement.ChildNodes.OfType<XmlElement>())
 			{
 				try
 				{
@@ -165,7 +165,7 @@ namespace EJKLeltar
 					{
 						if (MessageBox.Show($"A lista már tartalmaz egy elemet a \"{code}\" azonosítóval. Kitöröljem az új bejegyzést?", "Ütközés", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 						{
-							Document.DocumentElement.RemoveChild(n);
+							_document.DocumentElement.RemoveChild(n);
 							continue;
 						}
 						else
@@ -207,14 +207,14 @@ namespace EJKLeltar
 
 			if (Properties.Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath))
 			{
-				_loadFile();
+				LoadFile();
 			}
 			else
 			{
-				Document = new XmlDocument();
-				Document.AppendChild(Document.CreateXmlDeclaration("1.0", "utf-8", null));
-				Document.AppendChild(Document.CreateElement("Inventory"));
-				_populateList();
+				_document = new XmlDocument();
+				_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
+				_document.AppendChild(_document.CreateElement("Inventory"));
+				PopulateList();
 			}
 			_selected = null;
 			SetActive(false);
@@ -223,7 +223,7 @@ namespace EJKLeltar
 		// Search
 		private void searchButton_Click(object sender, EventArgs e)
 		{
-			_populateList();
+			PopulateList();
 		}
 
 		// Select item
@@ -231,8 +231,8 @@ namespace EJKLeltar
 		{
 			if (e.Item != null)
 			{
-				_selected = Document.DocumentElement.ChildNodes.OfType<XmlElement>().Single(n => n["ID"].InnerText == e.Item.Text);
-				_displayEntry(_selected);
+				_selected = _document.DocumentElement.ChildNodes.OfType<XmlElement>().Single(n => n["ID"].InnerText == e.Item.Text);
+				DisplayEntry(_selected);
 				SetActive(true);
 			}
 			else
@@ -263,13 +263,13 @@ namespace EJKLeltar
 					return;
 			}
 			Properties.Settings.Default.FilePath = "";
-			Document = new XmlDocument();
-			Document.AppendChild(Document.CreateXmlDeclaration("1.0", "utf-8", null));
-			Document.AppendChild(Document.CreateElement("Inventory"));
+			_document = new XmlDocument();
+			_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
+			_document.AppendChild(_document.CreateElement("Inventory"));
 			SetChanged(false);
 			_selected = null;
 			SetActive(false);
-			_populateList();
+			PopulateList();
 		}
 
 		// Open document
@@ -294,7 +294,7 @@ namespace EJKLeltar
 			{
 				Properties.Settings.Default.FilePath = d.FileName;
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
-				_loadFile();
+				LoadFile();
 				_selected = null;
 				SetActive(false);
 			}
@@ -310,7 +310,7 @@ namespace EJKLeltar
 			}
 			else
 			{
-				_saveFile();
+				SaveFile();
 			}
 		}
 
@@ -328,7 +328,7 @@ namespace EJKLeltar
 			{
 				Properties.Settings.Default.FilePath = d.FileName;
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
-				_saveFile();
+				SaveFile();
 			}
 		}
 
@@ -360,11 +360,11 @@ namespace EJKLeltar
 		// New book
 		private void newBookToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (_editForm.ShowDialog(Document) == DialogResult.OK)
+			if (_editForm.ShowDialog(_document) == DialogResult.OK)
 			{
-				Document.DocumentElement.AppendChild(_editForm.Element);
+				_document.DocumentElement.AppendChild(_editForm.Element);
 				SetChanged(true);
-				_populateList();
+				PopulateList();
 				mainList.SelectedIndices.Add(mainList.Items.Count - 1);
 				mainList.EnsureVisible(mainList.SelectedIndices[0]);
 			}
@@ -374,7 +374,7 @@ namespace EJKLeltar
 		private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			_editForm.ShowDialog(_selected);
-			_displayEntry(_selected);
+			DisplayEntry(_selected);
 		}
 
 		// Borrow book
@@ -384,7 +384,7 @@ namespace EJKLeltar
 				return;
 			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Borrow) == DialogResult.OK)
 				SetChanged(true);
-			_displayEntry(_selected);
+			DisplayEntry(_selected);
 		}
 
 		// Return book
@@ -394,7 +394,7 @@ namespace EJKLeltar
 				return;
 			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Return) == DialogResult.OK)
 				SetChanged(true);
-			_displayEntry(_selected);
+			DisplayEntry(_selected);
 		}
 
 		// Add books
@@ -402,7 +402,7 @@ namespace EJKLeltar
 		{
 			if (_changeForm.ShowDialog(_selected, ChangeQuantityForm.OpenMode.Add) == DialogResult.OK)
 				SetChanged(true);
-			_displayEntry(_selected);
+			DisplayEntry(_selected);
 		}
 
 		// Delete book
@@ -411,8 +411,8 @@ namespace EJKLeltar
 			if (MessageBox.Show($"A kiválasztott bejegyzés véglegesen törölve lesz:\n\n{_selected["Title"].InnerText}\n{_selected["ID"].InnerText}", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 			{
 				int index = mainList.SelectedIndices[0];
-				Document.DocumentElement.RemoveChild(_selected);
-				_populateList();
+				_document.DocumentElement.RemoveChild(_selected);
+				PopulateList();
 				mainList.Select();
 				index = Math.Min(index, mainList.Items.Count - 1);
 				mainList.Items[index].Selected = true;
