@@ -18,6 +18,7 @@ namespace EJKLeltar
 		public XmlDocument Document;
 		private bool _changed = false;
 		private XmlElement _selected;
+		private HashSet<string> _ids;
 
 		// Sub-forms
 		private AboutForm _aboutForm;
@@ -33,17 +34,16 @@ namespace EJKLeltar
 			_settingsForm = new SettingsForm(this);
 			_changeForm = new ChangeQuantityForm();
 
+			_ids = new HashSet<string>();
+
 			InitializeComponent();
 
 			// Load settings
 			Size = Properties.Settings.Default.WindowSize;
 			WindowState = Properties.Settings.Default.WindowMaximized ? FormWindowState.Maximized : FormWindowState.Normal;
-			if (Properties.Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath))
-			{
-				_loadFile();
-			}
 		}
 
+		#region Methods
 		// Set _changed and form title
 		public void SetChanged(bool changed)
 		{
@@ -60,42 +60,45 @@ namespace EJKLeltar
 			deleteButton.Enabled = active;
 			addButton.Enabled = active;
 		}
-
-		// Set shortcut keys
-		public void SetShortcuts()
-		{
-			newBookToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
-			editBookToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.E;
-			borrowToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.K;
-			returnToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.L;
-		}
-
+		
 		// Display book data
 		private void _displayEntry(XmlElement e)
 		{
-			if (e != null)
+			try
 			{
-				titleText.Text = e["Title"].InnerText;
-				idText.Text = e["ID"].InnerText;
-				subjectText.Text = e["Subject"].InnerText;
-				int count = int.Parse(e["Count"].InnerText);
-				int outCount = int.Parse(e["Out"].InnerText);
-				int inCount = count - outCount;
+				if (e != null)
+				{
+					titleText.Text = e["Title"].InnerText;
+					idText.Text = e["ID"].InnerText;
+					subjectText.Text = e["Subject"].InnerText;
+					int count = int.Parse(e["Count"].InnerText);
+					int outCount = int.Parse(e["Out"].InnerText);
+					int inCount = count - outCount;
 
-				inText.Text = inCount.ToString();
-				outText.Text = outCount.ToString();
-				totalText.Text = count.ToString();
-				commentText.Text = e["Comment"].InnerText.Replace('|', '\n');
+					inText.Text = inCount.ToString();
+					outText.Text = outCount.ToString();
+					totalText.Text = count.ToString();
+					commentText.Text = e["Comment"].InnerText.Replace('|', '\n');
+				}
+				else
+				{
+					titleText.Text = "Cím";
+					idText.Text = "Azonosító";
+					subjectText.Text = "Szakma";
+					inText.Text = "";
+					outText.Text = "";
+					totalText.Text = "";
+					commentText.Text = "Megjegyzés";
+				}
 			}
-			else
+			catch (NullReferenceException ex)
 			{
-				titleText.Text = "Cím";
-				idText.Text = "Azonosító";
-				subjectText.Text = "Szakma";
-				inText.Text = "";
-				outText.Text = "";
-				totalText.Text = "";
-				commentText.Text = "Megjegyzés";
+				if (MessageBox.Show("A kijelölt bejegyzés egyik mezője hiányzik. Törlöd?", "Hiba", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+				{
+					Document.DocumentElement.RemoveChild(_selected);
+					_selected = null;
+					_populateList();
+				}
 			}
 		}
 
@@ -108,11 +111,27 @@ namespace EJKLeltar
 			_populateList();
 		}
 
+		// Make backups
+		private void MakeBackup()
+		{
+
+		}
+
 		// Save XML doc
 		private void _saveFile()
 		{
 			try
 			{
+				// Backup
+				if(Properties.Settings.Default.BackupCount > 0)
+				{
+					if(Properties.Settings.Default.BackupPathSelect)
+					{
+						// Backup in the selected directory
+					}
+				}
+
+				// Save
 				Document.Save(Properties.Settings.Default.FilePath);
 				SetChanged(false);
 			}
@@ -125,28 +144,64 @@ namespace EJKLeltar
 		// Read, filter and display XmlElements
 		private void _populateList()
 		{
+			_ids.Clear();
 			mainList.Items.Clear();
 			mainList.SelectedIndices.Clear();
 			foreach (XmlElement n in Document.DocumentElement.ChildNodes.OfType<XmlElement>())
 			{
-				// Get relevant fields
-				string code = n["ID"].InnerText;
-				string title = n["Title"].InnerText;
-
-				// Add main list items
-				if (string.IsNullOrEmpty(searchText.Text) || (code.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant()) || title.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant())))
+				try
 				{
-					ListViewItem item = new ListViewItem(code);
-					item.SubItems.Add(new ListViewItem.ListViewSubItem(item, title));
-					mainList.Items.Add(item);
+					// Get relevant fields
+					string code = n["ID"].InnerText.Trim();
+
+					if (string.IsNullOrWhiteSpace(code))
+					{
+						code = "ÜRES-" + n.GetHashCode();
+						n["ID"].InnerText = code;
+						MessageBox.Show($"Az egyik bejegyzés azonosítója üres vagy whitespace karakter. Az új azonosító {code}.");
+					}
+
+					if (_ids.Contains(code))
+					{
+						if (MessageBox.Show($"A lista már tartalmaz egy elemet a \"{code}\" azonosítóval. Kitöröljem az új bejegyzést?", "Ütközés", MessageBoxButtons.YesNo, MessageBoxIcon.Error, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+						{
+							Document.DocumentElement.RemoveChild(n);
+							continue;
+						}
+						else
+						{
+							code = $"{code}-{n.GetHashCode()}";
+							n["ID"].InnerText = code;
+							MessageBox.Show($"Az új azonosító {code} lesz.");
+						}
+						SetChanged(true);
+					}
+					_ids.Add(code);
+
+					string title = n["Title"].InnerText;
+
+					// Add main list items
+					if (string.IsNullOrEmpty(searchText.Text) || (code.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant()) || title.ToLowerInvariant().Contains(searchText.Text.ToLowerInvariant())))
+					{
+						ListViewItem item = new ListViewItem(code);
+						item.SubItems.Add(new ListViewItem.ListViewSubItem(item, title));
+						mainList.Items.Add(item);
+					}
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.ToString());
 				}
 			}
 			mainList.SelectedIndices.Clear();
 		}
+		#endregion
 
+		#region Event handlers
 		// Form loads
 		private void MainForm_Load(object sender, EventArgs e)
 		{
+			SetChanged(false);
 			if (string.IsNullOrEmpty(Properties.Settings.Default.LastDir))
 				Properties.Settings.Default.LastDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
@@ -161,7 +216,6 @@ namespace EJKLeltar
 				Document.AppendChild(Document.CreateElement("Inventory"));
 				_populateList();
 			}
-			SetChanged(false);
 			_selected = null;
 			SetActive(false);
 		}
@@ -356,8 +410,13 @@ namespace EJKLeltar
 		{
 			if (MessageBox.Show($"A kiválasztott bejegyzés véglegesen törölve lesz:\n\n{_selected["Title"].InnerText}\n{_selected["ID"].InnerText}", "Törlés", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
 			{
+				int index = mainList.SelectedIndices[0];
 				Document.DocumentElement.RemoveChild(_selected);
 				_populateList();
+				mainList.Select();
+				index = Math.Min(index, mainList.Items.Count - 1);
+				mainList.Items[index].Selected = true;
+				mainList.EnsureVisible(index);
 				SetChanged(true);
 			}
 		}
@@ -386,16 +445,25 @@ namespace EJKLeltar
 				{
 					searchText.Focus();
 				}
-		}
-	}
-
-		// Search text return
-		private void searchText_KeyDown(object sender, KeyEventArgs e)
-		{
-			if(e.KeyCode == Keys.Return)
-			{
-				searchButton_Click(sender, e);
 			}
 		}
+
+		// Search text keypresses
+		private void searchText_KeyDown(object sender, KeyEventArgs e)
+		{
+			switch (e.KeyCode)
+			{
+				case Keys.Enter:
+					searchButton_Click(sender, e);
+					break;
+				case Keys.Escape:
+					searchText.Text = "";
+					searchButton_Click(sender, e);
+					break;
+				default:
+					break;
+			}
+		}
+		#endregion
 	}
 }
