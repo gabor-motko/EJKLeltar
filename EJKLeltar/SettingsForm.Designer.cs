@@ -36,12 +36,12 @@
 			this.backupSameDirCheck = new System.Windows.Forms.RadioButton();
 			this.backupSelectDirCheck = new System.Windows.Forms.RadioButton();
 			this.browseBackupButton = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.backupPathText = new System.Windows.Forms.TextBox();
+			this.backupNumber = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
 			this.backupGroup = new System.Windows.Forms.GroupBox();
 			this.startUpGroup.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.backupNumber)).BeginInit();
 			this.backupGroup.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -54,6 +54,7 @@
 			this.cancelButton.TabIndex = 1;
 			this.cancelButton.Text = "Mégse";
 			this.cancelButton.UseVisualStyleBackColor = true;
+			this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
 			// 
 			// okButton
 			// 
@@ -64,6 +65,7 @@
 			this.okButton.TabIndex = 1;
 			this.okButton.Text = "OK";
 			this.okButton.UseVisualStyleBackColor = true;
+			this.okButton.Click += new System.EventHandler(this.okButton_Click);
 			// 
 			// newOnStartupCheck
 			// 
@@ -101,6 +103,7 @@
 			// backupSameDirCheck
 			// 
 			this.backupSameDirCheck.AutoSize = true;
+			this.backupSameDirCheck.Checked = true;
 			this.backupSameDirCheck.Location = new System.Drawing.Point(6, 19);
 			this.backupSameDirCheck.Name = "backupSameDirCheck";
 			this.backupSameDirCheck.Size = new System.Drawing.Size(168, 17);
@@ -129,19 +132,24 @@
 			this.browseBackupButton.Text = "...";
 			this.browseBackupButton.UseVisualStyleBackColor = true;
 			// 
-			// textBox1
+			// backupPathText
 			// 
-			this.textBox1.Location = new System.Drawing.Point(147, 41);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(237, 20);
-			this.textBox1.TabIndex = 2;
+			this.backupPathText.Location = new System.Drawing.Point(147, 41);
+			this.backupPathText.Name = "backupPathText";
+			this.backupPathText.Size = new System.Drawing.Size(237, 20);
+			this.backupPathText.TabIndex = 2;
 			// 
-			// numericUpDown1
+			// backupNumber
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(102, 71);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-			this.numericUpDown1.TabIndex = 3;
+			this.backupNumber.Location = new System.Drawing.Point(102, 71);
+			this.backupNumber.Name = "backupNumber";
+			this.backupNumber.Size = new System.Drawing.Size(120, 20);
+			this.backupNumber.TabIndex = 3;
+			this.backupNumber.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
 			// 
 			// label1
 			// 
@@ -155,8 +163,8 @@
 			// backupGroup
 			// 
 			this.backupGroup.Controls.Add(this.label1);
-			this.backupGroup.Controls.Add(this.numericUpDown1);
-			this.backupGroup.Controls.Add(this.textBox1);
+			this.backupGroup.Controls.Add(this.backupNumber);
+			this.backupGroup.Controls.Add(this.backupPathText);
 			this.backupGroup.Controls.Add(this.browseBackupButton);
 			this.backupGroup.Controls.Add(this.backupSelectDirCheck);
 			this.backupGroup.Controls.Add(this.backupSameDirCheck);
@@ -185,7 +193,7 @@
 			this.Load += new System.EventHandler(this.SettingsForm_Load);
 			this.startUpGroup.ResumeLayout(false);
 			this.startUpGroup.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.backupNumber)).EndInit();
 			this.backupGroup.ResumeLayout(false);
 			this.backupGroup.PerformLayout();
 			this.ResumeLayout(false);
@@ -201,8 +209,8 @@
 		private System.Windows.Forms.RadioButton backupSameDirCheck;
 		private System.Windows.Forms.RadioButton backupSelectDirCheck;
 		private System.Windows.Forms.Button browseBackupButton;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.NumericUpDown numericUpDown1;
+		private System.Windows.Forms.TextBox backupPathText;
+		private System.Windows.Forms.NumericUpDown backupNumber;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.GroupBox backupGroup;
 	}

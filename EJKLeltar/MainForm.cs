@@ -28,6 +28,8 @@ namespace EJKLeltar
 
 		public MainForm()
 		{
+			Settings.Load();
+
 			// Instantiate sub-forms
 			_aboutForm = new AboutForm();
 			_editForm = new EditForm(this);
@@ -39,8 +41,8 @@ namespace EJKLeltar
 			InitializeComponent();
 
 			// Load settings
-			Size = Properties.Settings.Default.WindowSize;
-			WindowState = Properties.Settings.Default.WindowMaximized ? FormWindowState.Maximized : FormWindowState.Normal;
+			Size = Settings.Default.WindowSize;
+			WindowState = Settings.Default.Maximized ? FormWindowState.Maximized : FormWindowState.Normal;
 		}
 
 		#region Methods
@@ -48,7 +50,7 @@ namespace EJKLeltar
 		public void SetChanged(bool changed)
 		{
 			_changed = changed;
-			Text = $"{(_changed ? "* " : "")}Leltár - {(string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath) ? "Üres dokumentum" : Properties.Settings.Default.FilePath)}";
+			Text = $"{(_changed ? "* " : "")}Leltár - {(string.IsNullOrWhiteSpace(Settings.Default.FilePath) ? "Üres dokumentum" : Settings.Default.FilePath)}";
 		}
 
 		// Enable or disable buttons
@@ -106,7 +108,7 @@ namespace EJKLeltar
 		private void LoadFile()
 		{
 			_document = new XmlDocument();
-			_document.Load(Properties.Settings.Default.FilePath);
+			_document.Load(Settings.Default.FilePath);
 			SetChanged(false);
 			PopulateList();
 		}
@@ -123,16 +125,16 @@ namespace EJKLeltar
 			try
 			{
 				// Backup
-				if(Properties.Settings.Default.BackupCount > 0)
+				if(Settings.Default.BackupCount > 0)
 				{
-					if(Properties.Settings.Default.BackupPathSelect)
+					if(Settings.Default.BackupPathSelect)
 					{
 						// Backup in the selected directory
 					}
 				}
 
 				// Save
-				_document.Save(Properties.Settings.Default.FilePath);
+				_document.Save(Settings.Default.FilePath);
 				SetChanged(false);
 			}
 			catch (Exception ex)
@@ -202,20 +204,27 @@ namespace EJKLeltar
 		private void MainForm_Load(object sender, EventArgs e)
 		{
 			SetChanged(false);
-			if (string.IsNullOrEmpty(Properties.Settings.Default.LastDir))
-				Properties.Settings.Default.LastDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+			if (string.IsNullOrEmpty(Settings.Default.LastDir))
+				Settings.Default.LastDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-			if (Properties.Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Properties.Settings.Default.FilePath))
+			if (Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Settings.Default.FilePath))
 			{
-				LoadFile();
+				try
+				{
+					LoadFile();
+				}
+				catch { }
 			}
 			else
 			{
+				MessageBox.Show($"{Settings.Default.OpenLast} - {Settings.Default.FilePath}");
+				Settings.Default.FilePath = "";
 				_document = new XmlDocument();
 				_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
 				_document.AppendChild(_document.CreateElement("Inventory"));
 				PopulateList();
 			}
+			SetChanged(false);
 			_selected = null;
 			SetActive(false);
 		}
@@ -262,7 +271,7 @@ namespace EJKLeltar
 				else if (res == DialogResult.Cancel)
 					return;
 			}
-			Properties.Settings.Default.FilePath = "";
+			Settings.Default.FilePath = "";
 			_document = new XmlDocument();
 			_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
 			_document.AppendChild(_document.CreateElement("Inventory"));
@@ -285,15 +294,15 @@ namespace EJKLeltar
 			}
 			OpenFileDialog d = new OpenFileDialog()
 			{
-				InitialDirectory = Properties.Settings.Default.LastDir,
+				InitialDirectory = Settings.Default.LastDir,
 				Multiselect = false,
 				Filter = "XML fájl|*.xml|Minden fájl|*.*",
 				Title = "Megnyitás"
 			};
 			if (d.ShowDialog() == DialogResult.OK)
 			{
-				Properties.Settings.Default.FilePath = d.FileName;
-				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
+				Settings.Default.FilePath = d.FileName;
+				Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
 				LoadFile();
 				_selected = null;
 				SetActive(false);
@@ -304,7 +313,7 @@ namespace EJKLeltar
 		// Save document
 		private void saveToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			if (string.IsNullOrEmpty(Properties.Settings.Default.FilePath))
+			if (string.IsNullOrEmpty(Settings.Default.FilePath))
 			{
 				saveAsToolStripMenuItem_Click(sender, e);
 			}
@@ -319,15 +328,15 @@ namespace EJKLeltar
 		{
 			SaveFileDialog d = new SaveFileDialog()
 			{
-				InitialDirectory = Path.GetDirectoryName(Properties.Settings.Default.LastDir),
+				InitialDirectory = Path.GetDirectoryName(Settings.Default.LastDir),
 				Filter = "XML fájl|*.xml|Minden fájl|*.*",
 				DefaultExt = "xml",
 				Title = "Mentés másként"
 			};
 			if (d.ShowDialog() == DialogResult.OK)
 			{
-				Properties.Settings.Default.FilePath = d.FileName;
-				Properties.Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
+				Settings.Default.FilePath = d.FileName;
+				Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
 				SaveFile();
 			}
 		}
@@ -352,9 +361,9 @@ namespace EJKLeltar
 					return;
 				}
 			}
-			Properties.Settings.Default.WindowSize = Size;
-			Properties.Settings.Default.WindowMaximized = WindowState == FormWindowState.Maximized;
-			Properties.Settings.Default.Save();
+			Settings.Default.WindowSize = Size;
+			Settings.Default.Maximized = WindowState == FormWindowState.Maximized;
+			Settings.Save();
 		}
 
 		// New book
@@ -426,7 +435,7 @@ namespace EJKLeltar
 		{
 			if (_settingsForm.ShowDialog() == DialogResult.OK)
 			{
-				Properties.Settings.Default.Save();
+				Settings.Save();
 			}
 		}
 

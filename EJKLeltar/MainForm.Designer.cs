@@ -29,9 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "KV-0",
-            "Példa könyv"}, -1);
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.mainList = new System.Windows.Forms.ListView();
 			this.codeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,12 +53,18 @@
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+			this.borrowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+			this.returnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
 			this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.titleText = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.idText = new System.Windows.Forms.TextBox();
@@ -83,9 +86,6 @@
 			this.subjectDrop = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.subjectText = new System.Windows.Forms.TextBox();
-			this.borrowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.returnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-			this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
 			this.mainListContextMenu.SuspendLayout();
 			this.mainMenuStrip.SuspendLayout();
 			this.quantityGroup.SuspendLayout();
@@ -104,8 +104,6 @@
 			this.mainList.GridLines = true;
 			this.mainList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 			this.mainList.HideSelection = false;
-			this.mainList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
 			this.mainList.Location = new System.Drawing.Point(12, 53);
 			this.mainList.MultiSelect = false;
 			this.mainList.Name = "mainList";
@@ -294,6 +292,25 @@
 			this.editBookToolStripMenuItem.Text = "Kiválasztott könyv szerkesztése...";
 			this.editBookToolStripMenuItem.Click += new System.EventHandler(this.editBookToolStripMenuItem_Click);
 			// 
+			// toolStripSeparator6
+			// 
+			this.toolStripSeparator6.Name = "toolStripSeparator6";
+			this.toolStripSeparator6.Size = new System.Drawing.Size(241, 6);
+			// 
+			// borrowToolStripMenuItem1
+			// 
+			this.borrowToolStripMenuItem1.Name = "borrowToolStripMenuItem1";
+			this.borrowToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+			this.borrowToolStripMenuItem1.Text = "Kikölcsönzés";
+			this.borrowToolStripMenuItem1.Click += new System.EventHandler(this.borrowButton_Click);
+			// 
+			// returnToolStripMenuItem1
+			// 
+			this.returnToolStripMenuItem1.Name = "returnToolStripMenuItem1";
+			this.returnToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
+			this.returnToolStripMenuItem1.Text = "Visszavétel";
+			this.returnToolStripMenuItem1.Click += new System.EventHandler(this.returnButton_Click);
+			// 
 			// toolStripSeparator5
 			// 
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
@@ -321,17 +338,37 @@
 			// helpToolStripMenuItem
 			// 
 			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.showHelpToolStripMenuItem,
+            this.aboutToolStripMenuItem,
+            this.toolStripSeparator7,
+            this.updateToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
 			this.helpToolStripMenuItem.Text = "Súg&ó";
 			// 
+			// showHelpToolStripMenuItem
+			// 
+			this.showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
+			this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.showHelpToolStripMenuItem.Text = "Súgó";
+			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
 			this.aboutToolStripMenuItem.Text = "Névjegy";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator7
+			// 
+			this.toolStripSeparator7.Name = "toolStripSeparator7";
+			this.toolStripSeparator7.Size = new System.Drawing.Size(114, 6);
+			// 
+			// updateToolStripMenuItem
+			// 
+			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.updateToolStripMenuItem.Text = "Frissítés";
 			// 
 			// titleText
 			// 
@@ -344,7 +381,6 @@
 			this.titleText.ReadOnly = true;
 			this.titleText.Size = new System.Drawing.Size(413, 68);
 			this.titleText.TabIndex = 5;
-			this.titleText.Text = "Cím";
 			// 
 			// label1
 			// 
@@ -366,7 +402,6 @@
 			this.idText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.idText.Size = new System.Drawing.Size(277, 20);
 			this.idText.TabIndex = 6;
-			this.idText.Text = "Azonosító";
 			// 
 			// quantityGroup
 			// 
@@ -455,7 +490,7 @@
 			// 
 			// deleteButton
 			// 
-			this.deleteButton.Location = new System.Drawing.Point(281, 97);
+			this.deleteButton.Location = new System.Drawing.Point(282, 97);
 			this.deleteButton.Name = "deleteButton";
 			this.deleteButton.Size = new System.Drawing.Size(125, 23);
 			this.deleteButton.TabIndex = 4;
@@ -465,7 +500,7 @@
 			// 
 			// addButton
 			// 
-			this.addButton.Location = new System.Drawing.Point(146, 97);
+			this.addButton.Location = new System.Drawing.Point(144, 97);
 			this.addButton.Name = "addButton";
 			this.addButton.Size = new System.Drawing.Size(125, 23);
 			this.addButton.TabIndex = 3;
@@ -475,7 +510,7 @@
 			// 
 			// editButton
 			// 
-			this.editButton.Location = new System.Drawing.Point(11, 97);
+			this.editButton.Location = new System.Drawing.Point(6, 97);
 			this.editButton.Name = "editButton";
 			this.editButton.Size = new System.Drawing.Size(125, 23);
 			this.editButton.TabIndex = 2;
@@ -527,11 +562,11 @@
 			this.commentText.ReadOnly = true;
 			this.commentText.Size = new System.Drawing.Size(410, 80);
 			this.commentText.TabIndex = 9;
-			this.commentText.Text = "Megjegyzés";
 			// 
 			// subjectDrop
 			// 
 			this.subjectDrop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.subjectDrop.Enabled = false;
 			this.subjectDrop.FormattingEnabled = true;
 			this.subjectDrop.Location = new System.Drawing.Point(186, 27);
 			this.subjectDrop.Name = "subjectDrop";
@@ -558,26 +593,6 @@
 			this.subjectText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
 			this.subjectText.Size = new System.Drawing.Size(277, 20);
 			this.subjectText.TabIndex = 7;
-			this.subjectText.Text = "Szakma";
-			// 
-			// borrowToolStripMenuItem1
-			// 
-			this.borrowToolStripMenuItem1.Name = "borrowToolStripMenuItem1";
-			this.borrowToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
-			this.borrowToolStripMenuItem1.Text = "Kikölcsönzés";
-			this.borrowToolStripMenuItem1.Click += new System.EventHandler(this.borrowButton_Click);
-			// 
-			// returnToolStripMenuItem1
-			// 
-			this.returnToolStripMenuItem1.Name = "returnToolStripMenuItem1";
-			this.returnToolStripMenuItem1.Size = new System.Drawing.Size(244, 22);
-			this.returnToolStripMenuItem1.Text = "Visszavétel";
-			this.returnToolStripMenuItem1.Click += new System.EventHandler(this.returnButton_Click);
-			// 
-			// toolStripSeparator6
-			// 
-			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(241, 6);
 			// 
 			// MainForm
 			// 
@@ -624,7 +639,6 @@
 		private System.Windows.Forms.MenuStrip mainMenuStrip;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
 		private System.Windows.Forms.ColumnHeader codeHeader;
 		private System.Windows.Forms.ColumnHeader titleHeader;
 		private System.Windows.Forms.TextBox titleText;
@@ -672,6 +686,10 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
 		private System.Windows.Forms.ToolStripMenuItem borrowToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem returnToolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem showHelpToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
 	}
 }
 
