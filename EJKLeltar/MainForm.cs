@@ -217,7 +217,6 @@ namespace EJKLeltar
 			}
 			else
 			{
-				MessageBox.Show($"{Settings.Default.OpenLast} - {Settings.Default.FilePath}");
 				Settings.Default.FilePath = "";
 				_document = new XmlDocument();
 				_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
