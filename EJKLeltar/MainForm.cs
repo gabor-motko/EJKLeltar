@@ -62,7 +62,7 @@ namespace EJKLeltar
 			deleteButton.Enabled = active;
 			addButton.Enabled = active;
 		}
-		
+
 		// Display book data
 		private void DisplayEntry(XmlElement e)
 		{
@@ -125,9 +125,9 @@ namespace EJKLeltar
 			try
 			{
 				// Backup
-				if(Settings.Default.BackupCount > 0)
+				if (Settings.Default.BackupCount > 0)
 				{
-					if(Settings.Default.BackupPathSelect)
+					if (Settings.Default.BackupPathSelect)
 					{
 						// Backup in the selected directory
 					}
@@ -139,7 +139,12 @@ namespace EJKLeltar
 			}
 			catch (Exception ex)
 			{
-				throw ex;
+				if (ex is System.Security.SecurityException)
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA felhasználónak nincs írási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				else if(ex is DriveNotFoundException)
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				else
+					throw ex;
 			}
 		}
 
@@ -161,6 +166,7 @@ namespace EJKLeltar
 						code = "ÜRES-" + n.GetHashCode();
 						n["ID"].InnerText = code;
 						MessageBox.Show($"Az egyik bejegyzés azonosítója üres vagy whitespace karakter. Az új azonosító {code}.");
+						SetChanged(true);
 					}
 
 					if (_ids.Contains(code))
@@ -213,7 +219,21 @@ namespace EJKLeltar
 				{
 					LoadFile();
 				}
-				catch { }
+				catch (Exception ex)
+				{
+					if (ex is DriveNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is FileNotFoundException || ex is DirectoryNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA fájl vagy mappa nem létezik.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is System.Security.SecurityException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA felhasználónak nincsen olvasási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+					Settings.Default.FilePath = "";
+					_document = new XmlDocument();
+					_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
+					_document.AppendChild(_document.CreateElement("Inventory"));
+					PopulateList();
+				}
 			}
 			else
 			{
@@ -223,7 +243,7 @@ namespace EJKLeltar
 				_document.AppendChild(_document.CreateElement("Inventory"));
 				PopulateList();
 			}
-			SetChanged(false);
+			//SetChanged(false);
 			_selected = null;
 			SetActive(false);
 		}
@@ -264,7 +284,7 @@ namespace EJKLeltar
 		{
 			if (_changed)
 			{
-				DialogResult res = MessageBox.Show("save?", "save?", MessageBoxButtons.YesNoCancel);
+				DialogResult res = MessageBox.Show("A dokumentumban nem mentett változtatások vannak. Mentsem?", "Dokumentum mentése", MessageBoxButtons.YesNoCancel);
 				if (res == DialogResult.Yes)
 					saveToolStripMenuItem_Click(sender, e);
 				else if (res == DialogResult.Cancel)
@@ -285,7 +305,7 @@ namespace EJKLeltar
 		{
 			if (_changed)
 			{
-				DialogResult res = MessageBox.Show("save?", "save?", MessageBoxButtons.YesNoCancel);
+				DialogResult res = MessageBox.Show("A dokumentumban nem mentett változtatások vannak. Mentsem?", "Dokumentum mentése", MessageBoxButtons.YesNoCancel);
 				if (res == DialogResult.Yes)
 					saveToolStripMenuItem_Click(sender, e);
 				else if (res == DialogResult.Cancel)
@@ -351,7 +371,7 @@ namespace EJKLeltar
 		{
 			if (_changed)
 			{
-				DialogResult res = MessageBox.Show("save?", "save?", MessageBoxButtons.YesNoCancel);
+				DialogResult res = MessageBox.Show("A dokumentumban nem mentett változtatások vannak. Mentsem?", "Dokumentum mentése", MessageBoxButtons.YesNoCancel);
 				if (res == DialogResult.Yes)
 					saveToolStripMenuItem_Click(sender, e);
 				else if (res == DialogResult.Cancel)

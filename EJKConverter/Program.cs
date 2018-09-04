@@ -9,8 +9,14 @@ namespace EJKConverter
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static int Main(string[] args)
 		{
+			if (args.Length < 1)
+			{
+				Console.WriteLine("Usage:\nEJKConverter.exe <source file> <destination file>");
+				return 0;
+			}
+
 			// Documents
 			XmlDocument doc = new XmlDocument();
 			XmlDocument newdoc = new XmlDocument();
@@ -28,55 +34,74 @@ namespace EJKConverter
 
 				Console.WriteLine(ex.ToString());
 				Console.ReadKey();
-				return;
+				return 2;
 			}
 
 			// Destination file
 			string dest = string.IsNullOrWhiteSpace(args[1]) ? args[0] : args[1];
 
 			// Process
-			foreach (XmlElement e in doc.DocumentElement.ChildNodes)
+			try
 			{
-				XmlElement book = newdoc.CreateElement("Book");
-				// Title
-				XmlElement name = newdoc.CreateElement("Title");
-				name.AppendChild(newdoc.CreateTextNode(e["title"].InnerText));
-				book.AppendChild(name);
+				foreach (XmlElement e in doc.DocumentElement.ChildNodes)
+				{
+					XmlElement book = newdoc.CreateElement("Book");
+					// Title
+					XmlElement name = newdoc.CreateElement("Title");
+					name.AppendChild(newdoc.CreateTextNode(e["title"].InnerText));
+					book.AppendChild(name);
 
-				// ID
-				XmlElement id = newdoc.CreateElement("ID");
-				id.AppendChild(newdoc.CreateTextNode(e.GetAttribute("id")));
-				book.AppendChild(id);
+					// ID
+					XmlElement id = newdoc.CreateElement("ID");
+					id.AppendChild(newdoc.CreateTextNode(e.GetAttribute("id")));
+					book.AppendChild(id);
 
-				// Counts
-				int i = int.Parse(e.GetAttribute("instorage"));
-				int o = int.Parse(e.GetAttribute("borrowed"));
-				int c = i + o;
+					// Counts
+					int i = int.Parse(e.GetAttribute("instorage"));
+					int o = int.Parse(e.GetAttribute("borrowed"));
+					int c = i + o;
 
-				XmlElement count = newdoc.CreateElement("Count");
-				count.AppendChild(newdoc.CreateTextNode(c.ToString()));
-				book.AppendChild(count);
+					XmlElement count = newdoc.CreateElement("Count");
+					count.AppendChild(newdoc.CreateTextNode(c.ToString()));
+					book.AppendChild(count);
 
-				XmlElement outcount = newdoc.CreateElement("Out");
-				outcount.AppendChild(newdoc.CreateTextNode(o.ToString()));
-				book.AppendChild(outcount);
+					XmlElement outcount = newdoc.CreateElement("Out");
+					outcount.AppendChild(newdoc.CreateTextNode(o.ToString()));
+					book.AppendChild(outcount);
 
-				// Subject
-				XmlElement subject = newdoc.CreateElement("Subject");
-				subject.AppendChild(newdoc.CreateTextNode("-"));
-				book.AppendChild(subject);
+					// Subject
+					XmlElement subject = newdoc.CreateElement("Subject");
+					subject.AppendChild(newdoc.CreateTextNode("-"));
+					book.AppendChild(subject);
 
-				// Comment
-				string note = e["note"].InnerText.Trim().Replace("|", Environment.NewLine);
-				XmlElement comment = newdoc.CreateElement("Comment");
-				comment.AppendChild(newdoc.CreateTextNode(note.Replace('\n', '|').Replace("\r", "").Trim()));
-				book.AppendChild(comment);
+					// Comment
+					string note = e["note"].InnerText.Trim().Replace("|", Environment.NewLine);
+					XmlElement comment = newdoc.CreateElement("Comment");
+					comment.AppendChild(newdoc.CreateTextNode(note.Replace('\n', '|').Replace("\r", "").Trim()));
+					book.AppendChild(comment);
 
-				root.AppendChild(book);
+					root.AppendChild(book);
+				}
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine(ex.ToString());
+				return 3;
 			}
 
 			// Save
-			newdoc.Save(dest);
+			try
+			{
+				newdoc.Save(dest);
+			}
+			catch(Exception ex)
+			{
+				Console.WriteLine(ex.ToString());
+				return 2;
+			}
+
+			Console.WriteLine("Done.");
+			return 0;
 		}
 	}
 }

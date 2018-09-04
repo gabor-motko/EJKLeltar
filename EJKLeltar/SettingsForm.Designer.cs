@@ -184,6 +184,7 @@
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.cancelButton);
 			this.Controls.Add(this.startUpGroup);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
 			this.MaximizeBox = false;
 			this.MinimizeBox = false;
 			this.Name = "SettingsForm";
