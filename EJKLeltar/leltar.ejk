@@ -1,0 +1,3056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Inventory>
+  <Book>
+    <Title>Villamos szakrajz alapismeretek</Title>
+    <ID>2267</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Eladástechnika</Title>
+    <ID>21010</ID>
+    <Count>67</Count>
+    <Out>41</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kultúrcikk és lakberendezési cikkek szakáruismerete</Title>
+    <ID>KP-2148</ID>
+    <Count>40</Count>
+    <Out>6</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|régi száma: 21022|2016-23 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari gépismeret</Title>
+    <ID>36134</ID>
+    <Count>13</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamos gépek</Title>
+    <ID>37118</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ipari elektronika</Title>
+    <ID>59223</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nőiruha-készítő szakmai ismeret</Title>
+    <ID>37333</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Alkatrészek készítésének technológiája a ruhaiparban</Title>
+    <ID>37335</ID>
+    <Count>23</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Feladatok a ruhakészítő alapszakmai ismerete oktatásához mf. 1.</Title>
+    <ID>37851</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építő szakmai ismeret</Title>
+    <ID>37116</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>AutoCAD alapismeretek Release 14</Title>
+    <ID>58313</ID>
+    <Count>8</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kommunikáció a kereskedelmi szakképzés számára / lila</Title>
+    <ID>58318</ID>
+    <Count>48</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kommunikáció a vendéglátó és az idegenforgalmi szakképzés számára / zöld</Title>
+    <ID>58319</ID>
+    <Count>15</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Üzleti kommunikáció / strucc</Title>
+    <ID>58331</ID>
+    <Count>15</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Üzleti kommunikáció</Title>
+    <ID>58341</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelés, villámvédelem, világítástechnika</Title>
+    <ID>59015</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Géptan a ruházati ipar számára</Title>
+    <ID>59019</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika</Title>
+    <ID>59022</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké|</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari szabás-szakrajz</Title>
+    <ID>59043</ID>
+    <Count>20</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nőiruha-szabás szakrajz I.</Title>
+    <ID>59061</ID>
+    <Count>30</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nőiruha-szabás szakrajz II.</Title>
+    <ID>59062</ID>
+    <Count>20</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari gépek</Title>
+    <ID>59075</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületszerkezetek, építési technológiák</Title>
+    <ID>59090</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gépi forgácsoló szakrajz</Title>
+    <ID>59091</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>ebből 4 db 2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Anyagismeret az erősáramú szakok részére</Title>
+    <ID>59093</ID>
+    <Count>6</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőanyagok</Title>
+    <ID>59094</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika/Demeter</Title>
+    <ID>59096</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gépipari szakrajz</Title>
+    <ID>59107</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>gépész|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari technológia</Title>
+    <ID>59187</ID>
+    <Count>25</Count>
+    <Out>6</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari anyag- és áruismeret</Title>
+    <ID>59189</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari géptan</Title>
+    <ID>59190</ID>
+    <Count>17</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőanyagok</Title>
+    <ID>59197</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irányítástechnikai alapismeretek</Title>
+    <ID>59204</ID>
+    <Count>8</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari gyártásszervezés</Title>
+    <ID>59209</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari szakrajz</Title>
+    <ID>59210</ID>
+    <Count>24</Count>
+    <Out>14</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari szakmai és gépismeret</Title>
+    <ID>59211</ID>
+    <Count>30</Count>
+    <Out>15</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari anyagismeret</Title>
+    <ID>59212</ID>
+    <Count>18</Count>
+    <Out>10</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektronikai gyakorlatok</Title>
+    <ID>59215</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Alapgyakorlatok</Title>
+    <ID>59216</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Forgács nélküli alakítások</Title>
+    <ID>59228</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Forgácsoló eljárások</Title>
+    <ID>59229</ID>
+    <Count>10</Count>
+    <Out>5</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké|2017-5 db</Comment>
+  </Book>
+  <Book>
+    <Title>CNC programozás alapjai</Title>
+    <ID>59231</ID>
+    <Count>9</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Asztalos szakmai és gépismeret</Title>
+    <ID>59243</ID>
+    <Count>21</Count>
+    <Out>5</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Asztalos szerkezettan-szakrajz</Title>
+    <ID>59244</ID>
+    <Count>9</Count>
+    <Out>5</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szakmai ismeret az esztergályos szakma számára</Title>
+    <ID>59287</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Anyagismeret</Title>
+    <ID>59297</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Számítógépes gyártáselőkészítés</Title>
+    <ID>59309</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szabadkézi rajz, modellrajz</Title>
+    <ID>59310</ID>
+    <Count>21</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Angol szakmai nyelv /elektronika</Title>
+    <ID>59319</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építő szakipari kitűzési és mérési ismeretek</Title>
+    <ID>59345</ID>
+    <Count>4</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületszigetelő munkák szakmai számításai</Title>
+    <ID>59347</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Művészettörténet, divattörténet</Title>
+    <ID>59367</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Modellrajz</Title>
+    <ID>59606</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Deutsch in der Gastronomie - Német nyelv a vendéglátásban</Title>
+    <ID>59628</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német oké</Comment>
+  </Book>
+  <Book>
+    <Title>Női ruhák készítése</Title>
+    <ID>59641</ID>
+    <Count>21</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Was wünschen sie? Kereskedő</Title>
+    <ID>59663</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedelmi szakmai ismeretek</Title>
+    <ID>59708</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajz 9-10.</Title>
+    <ID>98548</ID>
+    <Count>18</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2014 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Új szakmai számítások 2009</Title>
+    <ID>.0</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Pincér kiskáté 2011</Title>
+    <ID>.1</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Plusz 7 próbaérettségi németből</Title>
+    <ID>.10</ID>
+    <Count>14</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Német középszintű érettségi</Title>
+    <ID>.11</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gasztronómia</Title>
+    <ID>.12</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Egyesült Európa</Title>
+    <ID>.13</ID>
+    <Count>36</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kommunikation und Verkauf im Handel</Title>
+    <ID>.14</ID>
+    <Count>12</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|2016-2|2017-8 db</Comment>
+  </Book>
+  <Book>
+    <Title>English Light tankönyv</Title>
+    <ID>.15</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>raktáron 9 új|21 régi|oké</Comment>
+  </Book>
+  <Book>
+    <Title>English Light munkafüzet</Title>
+    <ID>.16</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>raktáron 8 új|21 régi|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Alapgyakorlatok /Gyimesi</Title>
+    <ID>TM-11014</ID>
+    <Count>4</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Viselkedéskultúra</Title>
+    <ID>.18</ID>
+    <Count>32</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Pincér kiskáté 2007</Title>
+    <ID>.2</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Pincér ismeretek 24 tételben</Title>
+    <ID>.3</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>HACCP ismeretek és közegészségügyi előírások</Title>
+    <ID>.4</ID>
+    <Count>7</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vállalkozz okosan. Feladatgyűjtemény</Title>
+    <ID>.5</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vállalkozz okosan!</Title>
+    <ID>.6</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Textil- és ruhaipari anyag- és áruismeret</Title>
+    <ID>59056</ID>
+    <Count>34</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>&lt;üres cím&gt;</Title>
+    <ID>.8</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2014|2016-9 oké|2017-16 db</Comment>
+  </Book>
+  <Book>
+    <Title>&lt;üres cím&gt;</Title>
+    <ID>.9</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2014|2016-9 oké|2017-16 db|</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika / Gergely</Title>
+    <ID>1522-07</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektronikus áramkörök</Title>
+    <ID>05-0725</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Az elektronikai rendszerek alapjai</Title>
+    <ID>05-0728</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektronika / Kovács</Title>
+    <ID>1849-09</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruházati áruismeret 1.</Title>
+    <ID>21004/I</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruházati áruismeret 2.</Title>
+    <ID>21004/II</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruházati áruismeret 3.</Title>
+    <ID>21004/III</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó szakmai alapismeretek</Title>
+    <ID>21014/1, KP-2194</ID>
+    <Count>9</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó eladói ismeretek</Title>
+    <ID>21021, KP-02147</ID>
+    <Count>14</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|3 db 2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémtechnológia 1. Alapismeretek</Title>
+    <ID>36001/I</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémtechnológia 2. Szakismeretek</Title>
+    <ID>36001/II.</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>gépész|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémipari anyag- és gyártásismeret II.</Title>
+    <ID>36083/II-1</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelő szakmai ismeret II.</Title>
+    <ID>36099/II.</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Forgácsolási technológia</Title>
+    <ID>36103/I.</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szerkezetlakatos szerkezettan és szerelési ismeretek</Title>
+    <ID>36124/I.-1</ID>
+    <Count>22</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szerkezetlakatos szerkezettan és szerelési ismeret II.</Title>
+    <ID>36124/II.</ID>
+    <Count>64</Count>
+    <Out>6</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vas- és fémszerkezetlakatos szerkezettan és szerelési ismeret </Title>
+    <ID>36210/II.</ID>
+    <Count>17</Count>
+    <Out>8</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|6 régi+3 újabb|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vas- és fémszerkezetlakatos szerkezettan és szerelési ismeret III.</Title>
+    <ID>36210/III.</ID>
+    <Count>31</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fehérneműkészítő szakmai ismeret I.</Title>
+    <ID>36224/I.</ID>
+    <Count>9</Count>
+    <Out>6</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamosipari anyag- és gyártásismeret</Title>
+    <ID>37028/I.</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nőiruha-készítő szakrajz 1.</Title>
+    <ID>37215-1</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Német szóbeli gyakorlatok</Title>
+    <ID>56485/NAT</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Német írásbeli gyakorlatok</Title>
+    <ID>56489/NAT</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Asztalos 2.</Title>
+    <ID>59012/II.</ID>
+    <Count>8</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnikai táblázatok</Title>
+    <ID>59016/K</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari gépek és technológiák I.</Title>
+    <ID>59252/I</ID>
+    <Count>19</Count>
+    <Out>14</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2016-11|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari gépek és technológiák II.</Title>
+    <ID>59252/II</ID>
+    <Count>18</Count>
+    <Out>12</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2016-11|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelő szakmai ismeretek I.</Title>
+    <ID>59720/I.</ID>
+    <Count>13</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelő szakmai ismeretek II.</Title>
+    <ID>59720/II.</ID>
+    <Count>6</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelő szakmai ismeretek III.</Title>
+    <ID>59720/III.</ID>
+    <Count>9</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem atlasz</Title>
+    <ID>CR-0008</ID>
+    <Count>32</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Career Paths Hotels &amp;Catering</Title>
+    <ID>EX-086</ID>
+    <Count>28</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Career Paths Engineering</Title>
+    <ID>EX-092</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem atlasz ált. isk.</Title>
+    <ID>FI-504010503</ID>
+    <Count>28</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem atlasz közép isk.</Title>
+    <ID>FI-504010903</ID>
+    <Count>92</Count>
+    <Out>22</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajz atlasz ált. isk.</Title>
+    <ID>FI-506010703</ID>
+    <Count>28</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajz atlasz közép isk.</Title>
+    <ID>FI-506010903</ID>
+    <Count>91</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Cukrászati technológia I.</Title>
+    <ID>FV-É-307/I</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Cukrászati technológia II.</Title>
+    <ID>FV-É-307/II</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gépelemek</Title>
+    <ID>FV-G-372</ID>
+    <Count>13</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>gépész|2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó és idegenforgalmi ismeretek</Title>
+    <ID>GA-06</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika példatár</Title>
+    <ID>1512-7</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika / Kerékgyártó</Title>
+    <ID>GR-0027</ID>
+    <Count>3</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari szakrajz</Title>
+    <ID>GS-0-04</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2016-11 oké|</Comment>
+  </Book>
+  <Book>
+    <Title>Építőanyagok</Title>
+    <ID>59097</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületszerkezetek szakrajza</Title>
+    <ID>GS-0-05</ID>
+    <Count>9</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari szakmai számítások</Title>
+    <ID>GS-0-06</ID>
+    <Count>8</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari költségvetési számítások</Title>
+    <ID>GS-0-08</ID>
+    <Count>7</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Munkavédelem, tűzvédelem, környezetvédelem</Title>
+    <ID>GS-0-09</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari gépek</Title>
+    <ID>GS-0-10</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Angol építőipari szakmai nyelvkönyv</Title>
+    <ID>GS-0-13</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari anyag- és gyártásismeret I.</Title>
+    <ID>GS-0-15</ID>
+    <Count>24</Count>
+    <Out>10</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2017-10 db oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari anyag- és gyártásismeret II.</Title>
+    <ID>GS-0-16</ID>
+    <Count>17</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari anyag- és gyártásismeret III.</Title>
+    <ID>GS-0-17</ID>
+    <Count>20</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari közös feladatok</Title>
+    <ID>GS-0-22</ID>
+    <Count>9</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biztonságos munkavégzés feltételei az építőiparban</Title>
+    <ID>GS-0-25</ID>
+    <Count>25</Count>
+    <Out>16</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|2017-8 db</Comment>
+  </Book>
+  <Book>
+    <Title>A munkavégzés komplex feltételei</Title>
+    <ID>GS-0-26</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari műszaki rajz</Title>
+    <ID>GS-0-27</ID>
+    <Count>3</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építési alapismeretek</Title>
+    <ID>GS-0-28</ID>
+    <Count>13</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2016-9|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Angol nyelvkönyv és feladatgyűjtemény szakiskolásoknak</Title>
+    <ID>GS-0-32</ID>
+    <Count>59</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2014|2016-17 |2017-21 db|</Comment>
+  </Book>
+  <Book>
+    <Title>Kőműves szakmai ismeretek I.</Title>
+    <ID>GS-1-01</ID>
+    <Count>13</Count>
+    <Out>7</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kőműves szakmai ismeretek II.</Title>
+    <ID>GS-1-02</ID>
+    <Count>9</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kőműves szakmai ismeretek III.</Title>
+    <ID>GS-1-03</ID>
+    <Count>10</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Falazás, vakolás I.</Title>
+    <ID>GS-1-04</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Hagyományos, cső- és keretes állványzatok</Title>
+    <ID>GS-1-06</ID>
+    <Count>10</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Víz-, hő- és hangszigetelések készítése</Title>
+    <ID>GS-1-08</ID>
+    <Count>20</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2015|2016-9 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Hagyományos és rendszerzsaluzatok készítése</Title>
+    <ID>GS-1-09</ID>
+    <Count>9</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gyakorlati munkafüzet kőműveseknek</Title>
+    <ID>GS-1-11</ID>
+    <Count>23</Count>
+    <Out>11</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|2017-10 db oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vegyes kőműves feladatok</Title>
+    <ID>GS-1-12</ID>
+    <Count>26</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2015|2016-8|2017-8 db</Comment>
+  </Book>
+  <Book>
+    <Title>Monolit beton és vasbeton szerkezetek</Title>
+    <ID>GS-1-14</ID>
+    <Count>32</Count>
+    <Out>23</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2015|2016-11 oké|2017-4 db|</Comment>
+  </Book>
+  <Book>
+    <Title>Előre gyártott vasbeton szerkezetek</Title>
+    <ID>GS-1-15</ID>
+    <Count>37</Count>
+    <Out>23</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2015|2016-11 oké|2017-10 db oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületburkoló szakmai ismeretek I.</Title>
+    <ID>GS-2-01</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületburkoló szakrajz</Title>
+    <ID>GS-2-03</ID>
+    <Count>11</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Burkolás előkészítése</Title>
+    <ID>GS-2-04</ID>
+    <Count>4</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Hidegburkolási feladatok</Title>
+    <ID>GS-2-05</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Melegburkolási feladatok</Title>
+    <ID>GS-2-06</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Hidegburkolási feladatok</Title>
+    <ID>GS-2-09</ID>
+    <Count>10</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari szerkezettan szakrajz I.</Title>
+    <ID>GS-4-05</ID>
+    <Count>20</Count>
+    <Out>15</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké|2017-3 db</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari szerkezettan szakrajz II.</Title>
+    <ID>GS-4-06</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari anyag- és gyártásismeret</Title>
+    <ID>GS-4-07</ID>
+    <Count>34</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2016-1|2017-24 db</Comment>
+  </Book>
+  <Book>
+    <Title>A biztonságos munkavégzés feladatai a faiparban</Title>
+    <ID>GS-4-11</ID>
+    <Count>35</Count>
+    <Out>23</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2016-11|2017-15db</Comment>
+  </Book>
+  <Book>
+    <Title>Német nyelvkönyv és feladatgyűjtemény szakiskolásoknak</Title>
+    <ID>GS-K-01</ID>
+    <Count>29</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>német|2016-8 oké|2017-12 db</Comment>
+  </Book>
+  <Book>
+    <Title>Schritte 1</Title>
+    <ID>HV-185-1851</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015|2016-2 oké|2017-4 db</Comment>
+  </Book>
+  <Book>
+    <Title>Schritte 2</Title>
+    <ID>HV-192-1852</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015|2016-2 oké|2017-4 db</Comment>
+  </Book>
+  <Book>
+    <Title>Schritte 3</Title>
+    <ID>HV-199-1853</ID>
+    <Count>7</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Schritte 4</Title>
+    <ID>HV-206-1854</ID>
+    <Count>7</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom  tk . 9. </Title>
+    <ID>KN-0010</ID>
+    <Count>84</Count>
+    <Out>20</Out>
+    <Subject>-</Subject>
+    <Comment>|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szgy. 9.</Title>
+    <ID>KN-0011</ID>
+    <Count>94</Count>
+    <Out>17</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom tk. 10./ régi kék-zöld</Title>
+    <ID>KN-0020</ID>
+    <Count>103</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szgy. 10.</Title>
+    <ID>KN-0021</ID>
+    <Count>68</Count>
+    <Out>20</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom tk. 11. / régi bordó</Title>
+    <ID>KN-0030</ID>
+    <Count>64</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom tk. 11. /új piros</Title>
+    <ID>KN-0030/1</ID>
+    <Count>30</Count>
+    <Out>13</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szgy. 11.</Title>
+    <ID>KN-0031</ID>
+    <Count>60</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom tk. 12./ régi barna</Title>
+    <ID>KN-0040</ID>
+    <Count>63</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom tk. 12./ új narancs</Title>
+    <ID>KN-0040/1</ID>
+    <Count>37</Count>
+    <Out>14</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szgy. 12.</Title>
+    <ID>KN-0041</ID>
+    <Count>75</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamos mérések I.</Title>
+    <ID>KP-02114</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szakmai gyakorlatok. Villamnos méréstechnika</Title>
+    <ID>KP-02118</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Szakáruismeret. Élelmiszerek és vegyi áruk</Title>
+    <ID>KP-02284</ID>
+    <Count>28</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Általános áruismeret</Title>
+    <ID>KP-21005/3</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó gazdálkodási ismeretek példatár</Title>
+    <ID>KP-21012/2/P</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamos méréstechnika szakmai gyakorlatok</Title>
+    <ID>KP-2118</ID>
+    <Count>7</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Sell it all /kereskedő</Title>
+    <ID>KP-2136</ID>
+    <Count>15</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamos gépek</Title>
+    <ID>KP-2151</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Áruismeret ABC eladóknak</Title>
+    <ID>KP-2193</ID>
+    <Count>15</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ételkészítési ismeretek</Title>
+    <ID>KP-2270</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Felszolgáló ismeretek</Title>
+    <ID>KP-2271</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014 is|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Élelmiszer alapismeretek a vendéglátó szakterület számára</Title>
+    <ID>KP-2279</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó gazdálkodási ismeretek</Title>
+    <ID>KP-2283</ID>
+    <Count>13</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2 db 2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Italismeret</Title>
+    <ID>KP-2325</ID>
+    <Count>16</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Áruismeret bolti eladóknak. Élelmiszerek és vegyi áruk</Title>
+    <ID>KP-2333</ID>
+    <Count>53</Count>
+    <Out>40</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2014 - 17 db|2016- 28 oké|2017-22 db</Comment>
+  </Book>
+  <Book>
+    <Title>Vállalkozási ismeretek mindenkinek</Title>
+    <ID>KP-2336</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Élelmiszer-alapismeretek</Title>
+    <ID>KP-2337</ID>
+    <Count>11</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Mérések munkatankönyv</Title>
+    <ID>KP-2342</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Anyag- és gyártásismeret a fémipari szakképesítések számára</Title>
+    <ID>KP-59086</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>HACCP ismeretek és élelmiszerbiztonsági előírások</Title>
+    <ID>KR-200</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó szakmai ismeretek a modulrendszerű képzésben</Title>
+    <ID>KR-202</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Alapozó kereskedelmi ismeretek és gyakorlatok</Title>
+    <ID>KR-304</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Alapozó kereskedelmi ismeretek és gyakorlatok munkafüzet</Title>
+    <ID>KR-304/A</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Korszerű ételkészítési ismeretek 1-2.</Title>
+    <ID>KR-400</ID>
+    <Count>9</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>2 KÖTETES!!!!!|vendéglátás|2015|OKÉ</Comment>
+  </Book>
+  <Book>
+    <Title>Szakmai vizsgára felkészítő feladattár a vendéglátás modulrendszerű képzéséhez</Title>
+    <ID>KR-401</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó gazdálkodás a modulrendszerű képzésben</Title>
+    <ID>KR-402</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Enjoy your food / szakács, cukrász</Title>
+    <ID>KR-865</ID>
+    <Count>13</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Guten Appetit - Német szakmai nyelvkönyv szakácsok, cukrászok számára</Title>
+    <ID>KR-867</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Communication and Sales in Trade</Title>
+    <ID>KR-875</ID>
+    <Count>35</Count>
+    <Out>10</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2015|2016-8 oké|2017-9 db</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedelmi ismeretek a modulrendszerű képzésben</Title>
+    <ID>KR-89</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>A kereskedelmi egység működtetése, az áruforgalom lebonyolítása</Title>
+    <ID>KR-90</ID>
+    <Count>55</Count>
+    <Out>44</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2014|2016-23|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Függvénytáblázat/sárga</Title>
+    <ID>KT-0319</ID>
+    <Count>39</Count>
+    <Out>11</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika érettségi fgy. I.</Title>
+    <ID>KT-0320</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika érettségi fgy. II.</Title>
+    <ID>KT-0321</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kommunikáció 9.</Title>
+    <ID>KT-1101</ID>
+    <Count>30</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Osztályközösség - építés</Title>
+    <ID>KT-1510</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Longman érettségi aktivátor</Title>
+    <ID>LM-1020</ID>
+    <Count>28</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2014-5|2016-15 oké|</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem II. /Száray</Title>
+    <ID>MK-1015102</ID>
+    <Count>59</Count>
+    <Out>24</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Árurendezési alapismeretek</Title>
+    <ID>MK-21724/I</ID>
+    <Count>44</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villanyszerelő szakmai ismeret III.</Title>
+    <ID>MK-36099/III</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Esztergályos szakmai ismeret III.</Title>
+    <ID>MK-36103/III</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Könnyűszerkezetlakatos - szerkezettan és szerelési ismeretek (kiegészítő)</Title>
+    <ID>MK-37125</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gépi forgácsoló szakmai gyakorlat</Title>
+    <ID>MK-36208/A</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|8 régi+4 új|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémipari alapképzés - szakmai gyakorlat</Title>
+    <ID>MK-36209/I</ID>
+    <Count>23</Count>
+    <Out>16</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Erősáramú berendezésszerelő szakmai ismeret II.</Title>
+    <ID>MK-36214/II</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémipari alapképzés - szakmai elmélet/szakmai ismeret</Title>
+    <ID>MK-36284/I</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>fémipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Erősáramú berendezésszerelő szakmai ismeret II.</Title>
+    <ID>MK-37026/II</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Esztergályos szakmai ismeret - kiegészítő</Title>
+    <ID>MK-37079</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építő szakmai ismeret</Title>
+    <ID>MK-37116</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Gépjármű - technikai alapismeretek</Title>
+    <ID>MK-59121/A</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>gépész|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnikai szakszámítások</Title>
+    <ID>MK-59143</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari szakrajz</Title>
+    <ID>MK-59155</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Épületek szerkezeti szakrajza</Title>
+    <ID>MK-59233</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fenntartás - építési és felújítási technológiák</Title>
+    <ID>MK-59234</ID>
+    <Count>4</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőpipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Ruhaipari gyártástechnológia</Title>
+    <ID>MK-6005-0</ID>
+    <Count>14</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedelmi és vállalkozási ismeretek</Title>
+    <ID>21017</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedelmi és vállalkozási ismeretek</Title>
+    <ID>MK-6016-8</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem</Comment>
+  </Book>
+  <Book>
+    <Title>Gazdasági alapismeretek</Title>
+    <ID>MK-6018-8</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari vállalkozási és üzleti ismeretek</Title>
+    <ID>MK-6019-7</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Egészségtan</Title>
+    <ID>MK-6026-5</ID>
+    <Count>31</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fémek kézi és kézi kisgépes alakítása</Title>
+    <ID>MK-6027-2</ID>
+    <Count>41</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2014, 1 db 2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Élelmiszerismeret I. Általános ismeretek, növényi eredetű élelmiszerek</Title>
+    <ID>MK-6032-X</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Élelmiszerismeret II. Állati eredetű élelmiszerek, élvezeti szerek</Title>
+    <ID>MK-6033-8</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátás és gazdálkodás szakiskolásoknak 1.</Title>
+    <ID>MK-6036-2</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátás és gazdálkodás szakiskolásoknak 2.</Title>
+    <ID>MK-6037-0</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátás és gazdálkodás szakiskolásoknak 3.</Title>
+    <ID>MK-6038-9</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátás és gazdálkodás szakiskolásoknak. Példatár</Title>
+    <ID>MK-6039-7</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>vendéglátás|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedelmi számítások példatára</Title>
+    <ID>MK-6058-3</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk németül 1./áruforgalom</Title>
+    <ID>MK-6059-1/I</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk németül 2./élelmiszerek és vegyi áruk</Title>
+    <ID>MK-6059-1/II</ID>
+    <Count>10</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk németül 3./ruházati termékek</Title>
+    <ID>MK-6059-1/III</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk németül 4. /bútor</Title>
+    <ID>MK-6059-1/IV</ID>
+    <Count>6</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk angolul 2. /élelmiszer</Title>
+    <ID>MK-6060-5/II</ID>
+    <Count>5</Count>
+    <Out>5</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kereskedjünk angolul 3. /ruházati</Title>
+    <ID>MK-6060-5/III</ID>
+    <Count>20</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>angol|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Női ruhák készítése</Title>
+    <ID>MK-6096-8</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>varró|oké</Comment>
+  </Book>
+  <Book>
+    <Title>A tömörfa megmunkálása</Title>
+    <ID>MK-6506-2</ID>
+    <Count>29</Count>
+    <Out>15</Out>
+    <Subject>-</Subject>
+    <Comment>faipar |2016-2 db||2017-17db</Comment>
+  </Book>
+  <Book>
+    <Title>Ruházati termékek ismerete és forgalmazása 1.</Title>
+    <ID>MK-6525-3</ID>
+    <Count>4</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Sokszínű matematika 9.</Title>
+    <ID>MS-2309</ID>
+    <Count>15</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Sokszínű matematika 10.</Title>
+    <ID>MS-2310</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Sokszínű matematika 11.</Title>
+    <ID>MS-2311</ID>
+    <Count>22</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Sokszínű matematika 12.</Title>
+    <ID>MS-2312</ID>
+    <Count>22</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Kémia 9.</Title>
+    <ID>MS-2616</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia 9.</Title>
+    <ID>MS-2618</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kémia 10.</Title>
+    <ID>MS-2620T</ID>
+    <Count>17</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajz 9.</Title>
+    <ID>MS-2621T</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajz 10.</Title>
+    <ID>MS-2625</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia 10.</Title>
+    <ID>MS-2641</ID>
+    <Count>25</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia 11.</Title>
+    <ID>MS-2642</ID>
+    <Count>23</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia 12.</Title>
+    <ID>MS-2643</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kémia 9-10.</Title>
+    <ID>MS-2691</ID>
+    <Count>24</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia 9-10.</Title>
+    <ID>MS-2693</ID>
+    <Count>27</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>studio d A1</Title>
+    <ID>MX-157</ID>
+    <Count>3</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Műszaki ábrázolás</Title>
+    <ID>NA-59800</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>ebből 3 db 2014,1 db 2015|2014-3 db|2015-1 db|2016-14 |oké</Comment>
+  </Book>
+  <Book>
+    <Title>A foglalkoztatás alapjai</Title>
+    <ID>NS-0114991200</ID>
+    <Count>81</Count>
+    <Out>8</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|2016-42|oké</Comment>
+  </Book>
+  <Book>
+    <Title>A munkahelyi egészség és biztonság alapjai</Title>
+    <ID>NS-0115001200</ID>
+    <Count>126</Count>
+    <Out>93</Out>
+    <Subject>-</Subject>
+    <Comment>2015 -63 db|2016 -61 oké|2017-32 db</Comment>
+  </Book>
+  <Book>
+    <Title>Villamosságtani alapismeretek</Title>
+    <ID>NS-1061001</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|2014|oké</Comment>
+  </Book>
+  <Book>
+    <Title>CNC forgácsolás 1: CNC programszerkesztés</Title>
+    <ID>NS-110 026406 001-3</ID>
+    <Count>20</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2016-10|oké</Comment>
+  </Book>
+  <Book>
+    <Title>CNC forgácsolás 2: CNC gépkezelés</Title>
+    <ID>NS-110 026406 002-0</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2015|2016-5||oké</Comment>
+  </Book>
+  <Book>
+    <Title>Viselkedés- és kommunikációs kultúra - a szakiskola 9.-10. évfolyama számára</Title>
+    <ID>NS-1310902</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Mindennapi ismeretek - a szakiskola 9.-10. évfolyama számára</Title>
+    <ID>NS-1311002</ID>
+    <Count>25</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Vegyes iparcikk áruk ismerete és forgalmazása</Title>
+    <ID>NS-17100271212</ID>
+    <Count>59</Count>
+    <Out>41</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|2016-28 oké|2017-22 db</Comment>
+  </Book>
+  <Book>
+    <Title>Műszaki cikkek áruismerete</Title>
+    <ID>NS-17100291210</ID>
+    <Count>59</Count>
+    <Out>48</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|2016-28 oké|2017-22 db</Comment>
+  </Book>
+  <Book>
+    <Title>Porcelán és edényáruk áruismerete és eladási gyakorlata</Title>
+    <ID>NS-309-012106-006-1</ID>
+    <Count>58</Count>
+    <Out>41</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|2016-28 oké|2017-22 db|</Comment>
+  </Book>
+  <Book>
+    <Title>Bútorok és lakástextíliák áruismerete és eladási gyakorlata</Title>
+    <ID>NS-314 000606 001-5</ID>
+    <Count>56</Count>
+    <Out>35</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2016-24 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Élelmiszer és vegyiáru ismeret</Title>
+    <ID>NS-SP-ÉV</ID>
+    <Count>11</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar nyelv és kommunikáció 9.</Title>
+    <ID>NT-00931/2</ID>
+    <Count>27</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar nyelv és kommunikáció 9-10.</Title>
+    <ID>NT-00931-1031/1</ID>
+    <Count>105</Count>
+    <Out>20</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Általános társadalomföldrajz mf.</Title>
+    <ID>NT-00958/M</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar nyelv és kommunikáció 11-12.</Title>
+    <ID>NT-01131-1231/1</ID>
+    <Count>75</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nyelvi kommunikációs tankönyv 9.</Title>
+    <ID>NT-12555/M/1</ID>
+    <Count>37</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem I. /Száray</Title>
+    <ID>NT-13163/1</ID>
+    <Count>90</Count>
+    <Out>23</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>&lt;üres cím&gt;</Title>
+    <ID>
+    </ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem III. /Závodszky</Title>
+    <ID>NT-13304/3</ID>
+    <Count>30</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Általános természetföldrajz</Title>
+    <ID>NT-15133/1</ID>
+    <Count>24</Count>
+    <Out>15</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyarország földrajza</Title>
+    <ID>NT-15134/1</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Általános társadalomföldrajz</Title>
+    <ID>NT-15135/1</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Regionális földrajz</Title>
+    <ID>NT-15136/2</ID>
+    <Count>6</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irány az ECDL</Title>
+    <ID>NT-16072</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika gyakorló fgy. I. /sárga</Title>
+    <ID>NT-16125/I</ID>
+    <Count>57</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika gyakorló fgy. II. /zöld</Title>
+    <ID>NT-16126/I</ID>
+    <Count>53</Count>
+    <Out>12</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika gyakorló fgy. III. /kék</Title>
+    <ID>NT-16127/I</ID>
+    <Count>45</Count>
+    <Out>17</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Függvénytáblázat/fehér</Title>
+    <ID>NT-16129/I</ID>
+    <Count>22</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2016-18|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia I. /Lénárt</Title>
+    <ID>NT-16208</ID>
+    <Count>14</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia II. /Lénárt</Title>
+    <ID>NT-16308</ID>
+    <Count>16</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Biológia III. /Lénárt</Title>
+    <ID>NT-16408</ID>
+    <Count>6</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Schrittweise 1 - kezdőknek</Title>
+    <ID>NT-56348</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Let's talk shop</Title>
+    <ID>NT-56359</ID>
+    <Count>22</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>kereskedelem|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Schrittweise 2 - középhaladóknak</Title>
+    <ID>NT-56411</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>START! Neu Plus - Gyakorlófeladatok és tesztek</Title>
+    <ID>NT-56440/F</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Unterwegs - Német II. munkafüzet</Title>
+    <ID>NT-56441/M</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kon - takt 1 tk.</Title>
+    <ID>NT-56541</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Kon - takt 1 mf.</Title>
+    <ID>NT-56541/M/NAT</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Összefoglaló fgy. Matematikából/régi zöld</Title>
+    <ID>NT-81307</ID>
+    <Count>36</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>New Horizons 1 munkafüzet</Title>
+    <ID>OX-4134309</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>New Horizons 1 Student's Book</Title>
+    <ID>OX-4134330</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2015 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Solutions 2nd edition Elementary Student's Book</Title>
+    <ID>OX-4552783</ID>
+    <Count>20</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Solutions 2nd edition Elementary Munkafüzet + audio CD</Title>
+    <ID>OX-4553629</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2015|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar nyelv és irdodalom 9.</Title>
+    <ID>PD-005</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szövegyűjtemény 9.</Title>
+    <ID>PD-0006</ID>
+    <Count>18</Count>
+    <Out>10</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Történelem 12.</Title>
+    <ID>PD-056</ID>
+    <Count>44</Count>
+    <Out>7</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar nyelv és irodalom</Title>
+    <ID>PD-190</ID>
+    <Count>35</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Irodalom szöveggyűjtemény 10.</Title>
+    <ID>PD-191</ID>
+    <Count>26</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Jelenben a múlt 9. tk.</Title>
+    <ID>PD-305</ID>
+    <Count>18</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Jelenben a múlt 9. mf.</Title>
+    <ID>PD-306</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Jelenben a múlt 10. tk.</Title>
+    <ID>PD-307</ID>
+    <Count>24</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Jelenben a múlt 10. mf</Title>
+    <ID>PD-308</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt 1 - tk.</Title>
+    <ID>RK-9641-41-9</ID>
+    <Count>10</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt 1 - mf.</Title>
+    <ID>RK-9641-42-6</ID>
+    <Count>6</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt 2 - tk.</Title>
+    <ID>RK-9641-44-0</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt 2 - mf.</Title>
+    <ID>RK-9641-45-7</ID>
+    <Count>7</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>német|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Nyelvismeret 9-10</Title>
+    <ID>SC-0002</ID>
+    <Count>30</Count>
+    <Out>4</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2015|2016-22 oké|2017-17db|</Comment>
+  </Book>
+  <Book>
+    <Title>Anyanyelv és kommunikáció</Title>
+    <ID>SC-0003</ID>
+    <Count>40</Count>
+    <Out>31</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2015|2016-15 oké|2017-22 db</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika 9-10.</Title>
+    <ID>SC-0006</ID>
+    <Count>14</Count>
+    <Out>5</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2015|2016-15 oké|2017-9 db</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar irodalom 9.</Title>
+    <ID>SC-0025</ID>
+    <Count>15</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2014 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Magyar irodalom 10.</Title>
+    <ID>SC-0030</ID>
+    <Count>4</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Fizika 9-10 .</Title>
+    <ID>SC-0033</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2014 oké</Comment>
+  </Book>
+  <Book>
+    <Title>Az elektrotechnika alapjai</Title>
+    <ID>TM-11001</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Az elektrotechnika alapjai</Title>
+    <ID>TM-11001/K</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>CAD alapismeretek</Title>
+    <ID>TM-11012/7</ID>
+    <Count>12</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>oké</Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika</Title>
+    <ID>TM-11002/K</ID>
+    <Count>1</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>Villamos anyagismeret és technológia</Title>
+    <ID>TM-11005</ID>
+    <Count>13</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>elektronika|oké</Comment>
+  </Book>
+  <Book>
+    <Title>&lt;üres cím&gt;</Title>
+    <ID>
+    </ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Fémipari alapműveletek elmélete és gyakorlata</Title>
+    <ID>TM-21014/K</ID>
+    <Count>19</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Hegesztés</Title>
+    <ID>TM-21015</ID>
+    <Count>16</Count>
+    <Out>15</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-12 db</Comment>
+  </Book>
+  <Book>
+    <Title>Munka- és környezetvédelem</Title>
+    <ID>TM-11010</ID>
+    <Count>12</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Falazás, vakolás III.</Title>
+    <ID>GS-1-10</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Ipari elektronika</Title>
+    <ID>37121</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Elektrotechnika / Gergely</Title>
+    <ID>3886-14</ID>
+    <Count>0</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Villamos anyagismeret és technológia</Title>
+    <ID>TM-11005/K</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>A villamos mérések alapjai</Title>
+    <ID>TM-11008</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Erősáramú berendezés-szerelő szakrajz</Title>
+    <ID>37151</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Villamos gépek / Hámori</Title>
+    <ID>TM-21012</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Forgácsolási eljárások</Title>
+    <ID>TM-21016</ID>
+    <Count>18</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-15 db</Comment>
+  </Book>
+  <Book>
+    <Title>Munkajogi és vállakozási alapismeretek</Title>
+    <ID>TM-81002</ID>
+    <Count>8</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Könnyűipari anyag- és áruismeret TK</Title>
+    <ID>MK-6503-1</ID>
+    <Count>10</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>könnyűipar|2017 - 10db</Comment>
+  </Book>
+  <Book>
+    <Title>Könnyűipari anyag- és áruismeret MF</Title>
+    <ID>MK-6504-8</ID>
+    <Count>10</Count>
+    <Out>9</Out>
+    <Subject>-</Subject>
+    <Comment>könnyűipar|2017-10 db</Comment>
+  </Book>
+  <Book>
+    <Title>Falazás, vakolás</Title>
+    <ID>GS-1-13</ID>
+    <Count>5</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|</Comment>
+  </Book>
+  <Book>
+    <Title>Vendéglátó szakmai idegen nyelv - angol</Title>
+    <ID>TM-61006</ID>
+    <Count>2</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>angol szakmai|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>The English Hub 1A SB</Title>
+    <ID>The engl</ID>
+    <Count>28</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2017-34 db</Comment>
+  </Book>
+  <Book>
+    <Title>The English Hub 1A WB</Title>
+    <ID>teh engl</ID>
+    <Count>9</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2017-34 db</Comment>
+  </Book>
+  <Book>
+    <Title>The English Hub 1B SB</Title>
+    <ID>the engl</ID>
+    <Count>20</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2017-20|</Comment>
+  </Book>
+  <Book>
+    <Title>The English Hub 1B WB</Title>
+    <ID>the engli</ID>
+    <Count>20</Count>
+    <Out>18</Out>
+    <Subject>-</Subject>
+    <Comment>2017-20 db</Comment>
+  </Book>
+  <Book>
+    <Title>Gyakorlati munkafüzet asztalosoknak</Title>
+    <ID>GS-4-14</ID>
+    <Count>36</Count>
+    <Out>21</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2017-39 db</Comment>
+  </Book>
+  <Book>
+    <Title>Faipari szakrajz</Title>
+    <ID>GS-4-15</ID>
+    <Count>15</Count>
+    <Out>8</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2017-15 db</Comment>
+  </Book>
+  <Book>
+    <Title>Tömörfa megmunkálás</Title>
+    <ID>GS-4-21</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Bútorasztalos szerkezetek és szakrajz</Title>
+    <ID>GS-4-22</ID>
+    <Count>10</Count>
+    <Out>7</Out>
+    <Subject>-</Subject>
+    <Comment>faipar|2017-10 db</Comment>
+  </Book>
+  <Book>
+    <Title>Vasbeton szerkezetek</Title>
+    <ID>GS-5-12</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|2017-11 db</Comment>
+  </Book>
+  <Book>
+    <Title>Gépészeti alapismeretek</Title>
+    <ID>MK-5001</ID>
+    <Count>2</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Anyagismeret, anyagvizsgálat</Title>
+    <ID>MK-5003</ID>
+    <Count>15</Count>
+    <Out>11</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|régi 8|2017-12 db</Comment>
+  </Book>
+  <Book>
+    <Title>Műszaki dokumentációk</Title>
+    <ID>MK-5011</ID>
+    <Count>19</Count>
+    <Out>17</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-17 db</Comment>
+  </Book>
+  <Book>
+    <Title>Géprajzi tesztfeladatok</Title>
+    <ID>MK-5040</ID>
+    <Count>15</Count>
+    <Out>14</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-15 db</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari közös feladatok</Title>
+    <ID>MK-6519-2</ID>
+    <Count>14</Count>
+    <Out>11</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|2017-14db</Comment>
+  </Book>
+  <Book>
+    <Title>Építőipari munkajog és vállalkozási alapismeretek</Title>
+    <ID>MK-6530-7</ID>
+    <Count>11</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>építőipar|2017-11 db</Comment>
+  </Book>
+  <Book>
+    <Title>Gázhegesztés és rokon eljárások</Title>
+    <ID>MK-6536-9</ID>
+    <Count>2</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Ívhegesztés </Title>
+    <ID>MK-6538-3</ID>
+    <Count>2</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>gépészet|2017-2 db</Comment>
+  </Book>
+  <Book>
+    <Title>Solutions 2nd ed. pre-intermediate SB</Title>
+    <ID>OX-4552875</ID>
+    <Count>9</Count>
+    <Out>2</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2017-12 db</Comment>
+  </Book>
+  <Book>
+    <Title>Solutions 2nd ed. pre-intermediate WB</Title>
+    <ID>OX-4553636</ID>
+    <Count>8</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>angol|2017-12 db</Comment>
+  </Book>
+  <Book>
+    <Title>Matematika gyakorló fgy. 9-10.</Title>
+    <ID>SC-0007</ID>
+    <Count>10</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>SNI|2017-17 db</Comment>
+  </Book>
+  <Book>
+    <Title>Épületasztalos szerkezetek</Title>
+    <ID>GS-4-20</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>faipar</Comment>
+  </Book>
+  <Book>
+    <Title>Gépészeti alapismeretek</Title>
+    <ID>TM-11013</ID>
+    <Count>5</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Történelmi atlasz középiskolásoknak</Title>
+    <ID>FI-504010903/2</ID>
+    <Count>20</Count>
+    <Out>1</Out>
+    <Subject>-</Subject>
+    <Comment>2017|</Comment>
+  </Book>
+  <Book>
+    <Title>Földrajzi atlasz középiskolásoknak</Title>
+    <ID>FI-506010903/1</ID>
+    <Count>10</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>
+    </Comment>
+  </Book>
+  <Book>
+    <Title>Hegesztés munkatankönyv a szóbeli tételek kidolgozásához</Title>
+    <ID>MK-5008</ID>
+    <Count>3</Count>
+    <Out>3</Out>
+    <Subject>-</Subject>
+    <Comment>2017-3 db</Comment>
+  </Book>
+  <Book>
+    <Title>Forgácsoló eljárások tervezése</Title>
+    <ID>NS-108-027606-003-7</ID>
+    <Count>3</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2017-3 db</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt Kursbuch 1</Title>
+    <ID>RK-9641-41-9/új</ID>
+    <Count>23</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2017-23 db</Comment>
+  </Book>
+  <Book>
+    <Title>Direkt Arbeitsbuch 1</Title>
+    <ID>RK-9641-42-6/új</ID>
+    <Count>23</Count>
+    <Out>0</Out>
+    <Subject>-</Subject>
+    <Comment>2017-23 db</Comment>
+  </Book>
+</Inventory>

@@ -3,7 +3,9 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Drawing;
-using System.Xml.Schema;
+using System.Net;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace EJKLeltar
 {
@@ -19,6 +21,8 @@ namespace EJKLeltar
 
 		public static void Save()
 		{
+			// TODO: don't do this.
+			Default.StartupLoad = 2;
 			SettingsData.Serialize(Default, Path);
 		}
 
@@ -27,7 +31,7 @@ namespace EJKLeltar
 			// File
 			public string FilePath;
 			public string LastDir;
-			public bool OpenLast;
+			public int StartupLoad;
 
 			// Window
 			public Size WindowSize;
@@ -70,7 +74,7 @@ namespace EJKLeltar
 					stream.Close();
 					return o;
 				}
-				catch(Exception ex)
+				catch (Exception ex)
 				{
 					System.Windows.Forms.MessageBox.Show(ex.ToString());
 				}

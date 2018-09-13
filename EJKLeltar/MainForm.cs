@@ -15,6 +15,7 @@ namespace EJKLeltar
 	public partial class MainForm : Form
 	{
 		// Data
+		private const string _defaultFile = "leltar.ejk";
 		private XmlDocument _document;
 		private bool _changed = false;
 		private XmlElement _selected;
@@ -141,10 +142,45 @@ namespace EJKLeltar
 			{
 				if (ex is System.Security.SecurityException)
 					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA felhasználónak nincs írási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				else if(ex is DriveNotFoundException)
+				else if (ex is DriveNotFoundException)
 					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				else
-					throw ex;
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\n{ex.Message}", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		// Save XML doc as copy
+		private void ExportFile(string path)
+		{
+			try
+			{
+				// Save
+				_document.Save(path);
+			}
+			catch (Exception ex)
+			{
+				if (ex is System.Security.SecurityException || ex is UnauthorizedAccessException)
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA felhasználónak nincs írási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				else if (ex is DriveNotFoundException)
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				else
+					MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett elmenteni:\n{ex.Message}", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		}
+
+		// Import XML doc
+		private void ImportFile(string path)
+		{
+			try
+			{
+				_document = new XmlDocument();
+				_document.Load(path);
+				SetChanged(true);
+				PopulateList();
+			}
+			catch (Exception ex)
+			{
+
 			}
 		}
 
@@ -213,7 +249,7 @@ namespace EJKLeltar
 			if (string.IsNullOrEmpty(Settings.Default.LastDir))
 				Settings.Default.LastDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-			if (Settings.Default.OpenLast && !string.IsNullOrWhiteSpace(Settings.Default.FilePath))
+			if (Settings.Default.StartupLoad == 1 && !string.IsNullOrWhiteSpace(Settings.Default.FilePath))
 			{
 				try
 				{
@@ -225,7 +261,7 @@ namespace EJKLeltar
 						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					else if (ex is FileNotFoundException || ex is DirectoryNotFoundException)
 						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA fájl vagy mappa nem létezik.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-					else if (ex is System.Security.SecurityException)
+					else if (ex is System.Security.SecurityException || ex is UnauthorizedAccessException)
 						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA felhasználónak nincsen olvasási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 					Settings.Default.FilePath = "";
@@ -233,6 +269,29 @@ namespace EJKLeltar
 					_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
 					_document.AppendChild(_document.CreateElement("Inventory"));
 					PopulateList();
+				}
+			}
+			else if (Settings.Default.StartupLoad == 2)
+			{
+				try
+				{
+					Settings.Default.FilePath = _defaultFile;
+					LoadFile();
+				}
+				catch (Exception ex)
+				{
+					if (ex is DriveNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is FileNotFoundException || ex is DirectoryNotFoundException)
+					{
+						Settings.Default.FilePath = "";
+						_document = new XmlDocument();
+						_document.AppendChild(_document.CreateXmlDeclaration("1.0", "utf-8", null));
+						_document.AppendChild(_document.CreateElement("Inventory"));
+						PopulateList();
+					}
+					else if (ex is System.Security.SecurityException || ex is UnauthorizedAccessException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA felhasználónak nincsen olvasási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 			else
@@ -315,14 +374,27 @@ namespace EJKLeltar
 			{
 				InitialDirectory = Settings.Default.LastDir,
 				Multiselect = false,
-				Filter = "XML fájl|*.xml|Minden fájl|*.*",
+				Filter = "EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*",
 				Title = "Megnyitás"
 			};
 			if (d.ShowDialog() == DialogResult.OK)
 			{
 				Settings.Default.FilePath = d.FileName;
 				Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
-				LoadFile();
+				try
+				{
+					LoadFile();
+				}
+				catch (Exception ex)
+				{
+					if (ex is DriveNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is FileNotFoundException || ex is DirectoryNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA fájl vagy mappa nem létezik.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is System.Security.SecurityException || ex is UnauthorizedAccessException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA felhasználónak nincsen olvasási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
+
 				_selected = null;
 				SetActive(false);
 			}
@@ -348,8 +420,8 @@ namespace EJKLeltar
 			SaveFileDialog d = new SaveFileDialog()
 			{
 				InitialDirectory = Path.GetDirectoryName(Settings.Default.LastDir),
-				Filter = "XML fájl|*.xml|Minden fájl|*.*",
-				DefaultExt = "xml",
+				Filter = "EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*",
+				DefaultExt = "ejk",
 				Title = "Mentés másként"
 			};
 			if (d.ShowDialog() == DialogResult.OK)
@@ -357,6 +429,53 @@ namespace EJKLeltar
 				Settings.Default.FilePath = d.FileName;
 				Settings.Default.LastDir = Path.GetDirectoryName(d.FileName);
 				SaveFile();
+			}
+		}
+
+		// Export document
+		private void saveCopyToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			SaveFileDialog d = new SaveFileDialog()
+			{
+				InitialDirectory = Path.GetDirectoryName(Settings.Default.LastDir),
+				Filter = "EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*",
+				DefaultExt = "ejk",
+				Title = "Másolat mentése"
+			};
+			if (d.ShowDialog() == DialogResult.OK)
+			{
+				ExportFile(d.FileName);
+			}
+		}
+
+		// Import document
+		private void importToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("Ez a művelet a teljes dokumentumot felülírja. Biztos?", "Importálás megerősítése", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+				return;
+			OpenFileDialog d = new OpenFileDialog()
+			{
+				InitialDirectory = Path.GetDirectoryName(Settings.Default.LastDir),
+				Filter = "EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*",
+				DefaultExt = "ejk",
+				Title = "Dokumentum importálása",
+				Multiselect = false
+			};
+			if (d.ShowDialog() == DialogResult.OK)
+			{
+				try
+				{
+					ImportFile(d.FileName);
+				}
+				catch (Exception ex)
+				{
+					if (ex is DriveNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA(z) {Path.GetPathRoot(Settings.Default.FilePath)} jelű eszköz nem található.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is FileNotFoundException || ex is DirectoryNotFoundException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA fájl vagy mappa nem létezik.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					else if (ex is System.Security.SecurityException || ex is UnauthorizedAccessException)
+						MessageBox.Show($"A {Settings.Default.FilePath} helyen lévő fájlt nem lehetett megnyitni:\nA felhasználónak nincsen olvasási engedélye.", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				}
 			}
 		}
 

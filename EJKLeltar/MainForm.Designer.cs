@@ -48,6 +48,9 @@
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,6 +88,8 @@
 			this.subjectDrop = new System.Windows.Forms.ComboBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.subjectText = new System.Windows.Forms.TextBox();
+			this.openDialog = new System.Windows.Forms.OpenFileDialog();
+			this.saveDialog = new System.Windows.Forms.SaveFileDialog();
 			this.mainListContextMenu.SuspendLayout();
 			this.mainMenuStrip.SuspendLayout();
 			this.quantityGroup.SuspendLayout();
@@ -211,6 +216,9 @@
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
+            this.importToolStripMenuItem,
+            this.saveCopyToolStripMenuItem,
+            this.toolStripSeparator8,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
@@ -221,6 +229,7 @@
 			this.newFileToolStripMenuItem.Name = "newFileToolStripMenuItem";
 			this.newFileToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
 			this.newFileToolStripMenuItem.Text = "Új dokumentum";
+			this.newFileToolStripMenuItem.Visible = false;
 			this.newFileToolStripMenuItem.Click += new System.EventHandler(this.newFileToolStripMenuItem_Click);
 			// 
 			// openFileToolStripMenuItem
@@ -229,6 +238,7 @@
 			this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
 			this.openFileToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
 			this.openFileToolStripMenuItem.Text = "Megnyitás...";
+			this.openFileToolStripMenuItem.Visible = false;
 			this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
 			// 
 			// saveToolStripMenuItem
@@ -246,12 +256,32 @@
             | System.Windows.Forms.Keys.S)));
 			this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
 			this.saveAsToolStripMenuItem.Text = "Mentés másként...";
+			this.saveAsToolStripMenuItem.Visible = false;
 			this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(239, 6);
+			// 
+			// importToolStripMenuItem
+			// 
+			this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+			this.importToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+			this.importToolStripMenuItem.Text = "Importálás...";
+			this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+			// 
+			// saveCopyToolStripMenuItem
+			// 
+			this.saveCopyToolStripMenuItem.Name = "saveCopyToolStripMenuItem";
+			this.saveCopyToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+			this.saveCopyToolStripMenuItem.Text = "Másolat mentése...";
+			this.saveCopyToolStripMenuItem.Click += new System.EventHandler(this.saveCopyToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator8
+			// 
+			this.toolStripSeparator8.Name = "toolStripSeparator8";
+			this.toolStripSeparator8.Size = new System.Drawing.Size(239, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
@@ -347,8 +377,9 @@
 			// 
 			// showHelpToolStripMenuItem
 			// 
+			this.showHelpToolStripMenuItem.Enabled = false;
 			this.showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
-			this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.showHelpToolStripMenuItem.Text = "Súgó";
 			// 
 			// aboutToolStripMenuItem
@@ -366,8 +397,9 @@
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.updateToolStripMenuItem.Text = "Frissítés";
+			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
 			// titleText
 			// 
@@ -593,6 +625,11 @@
 			this.subjectText.Size = new System.Drawing.Size(277, 20);
 			this.subjectText.TabIndex = 7;
 			// 
+			// openDialog
+			// 
+			this.openDialog.Filter = "\"EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*\"";
+			this.openDialog.Multiselect = true;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -611,12 +648,12 @@
 			this.Controls.Add(this.searchText);
 			this.Controls.Add(this.mainList);
 			this.Controls.Add(this.mainMenuStrip);
+			this.Icon = global::EJKLeltar.Properties.Resources.MainIcon;
 			this.KeyPreview = true;
 			this.MainMenuStrip = this.mainMenuStrip;
 			this.MinimumSize = new System.Drawing.Size(800, 500);
 			this.Name = "MainForm";
 			this.Text = "Leltár";
-			this.Icon = Properties.Resources.MainIcon;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
 			this.Load += new System.EventHandler(this.MainForm_Load);
 			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
@@ -689,6 +726,11 @@
 		private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showHelpToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+		private System.Windows.Forms.ToolStripMenuItem saveCopyToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+		private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+		private System.Windows.Forms.OpenFileDialog openDialog;
+		private System.Windows.Forms.SaveFileDialog saveDialog;
 	}
 }
 

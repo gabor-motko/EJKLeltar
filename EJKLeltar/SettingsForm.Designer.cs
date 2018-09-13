@@ -33,6 +33,7 @@
 			this.newOnStartupCheck = new System.Windows.Forms.RadioButton();
 			this.openLastStartupCheck = new System.Windows.Forms.RadioButton();
 			this.startUpGroup = new System.Windows.Forms.GroupBox();
+			this.defaultOnStartupCheck = new System.Windows.Forms.RadioButton();
 			this.backupSameDirCheck = new System.Windows.Forms.RadioButton();
 			this.backupSelectDirCheck = new System.Windows.Forms.RadioButton();
 			this.browseBackupButton = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
 			// cancelButton
 			// 
 			this.cancelButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.cancelButton.Location = new System.Drawing.Point(419, 201);
+			this.cancelButton.Location = new System.Drawing.Point(419, 226);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(113, 23);
 			this.cancelButton.TabIndex = 1;
@@ -59,7 +60,7 @@
 			// okButton
 			// 
 			this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.okButton.Location = new System.Drawing.Point(300, 201);
+			this.okButton.Location = new System.Drawing.Point(300, 226);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(113, 23);
 			this.okButton.TabIndex = 1;
@@ -70,19 +71,19 @@
 			// newOnStartupCheck
 			// 
 			this.newOnStartupCheck.AutoSize = true;
-			this.newOnStartupCheck.Checked = true;
-			this.newOnStartupCheck.Location = new System.Drawing.Point(6, 19);
+			this.newOnStartupCheck.Enabled = false;
+			this.newOnStartupCheck.Location = new System.Drawing.Point(6, 42);
 			this.newOnStartupCheck.Name = "newOnStartupCheck";
 			this.newOnStartupCheck.Size = new System.Drawing.Size(99, 17);
 			this.newOnStartupCheck.TabIndex = 0;
-			this.newOnStartupCheck.TabStop = true;
 			this.newOnStartupCheck.Text = "Új dokumentum";
 			this.newOnStartupCheck.UseVisualStyleBackColor = true;
 			// 
 			// openLastStartupCheck
 			// 
 			this.openLastStartupCheck.AutoSize = true;
-			this.openLastStartupCheck.Location = new System.Drawing.Point(6, 42);
+			this.openLastStartupCheck.Enabled = false;
+			this.openLastStartupCheck.Location = new System.Drawing.Point(6, 65);
 			this.openLastStartupCheck.Name = "openLastStartupCheck";
 			this.openLastStartupCheck.Size = new System.Drawing.Size(128, 17);
 			this.openLastStartupCheck.TabIndex = 0;
@@ -91,14 +92,28 @@
 			// 
 			// startUpGroup
 			// 
+			this.startUpGroup.Controls.Add(this.defaultOnStartupCheck);
 			this.startUpGroup.Controls.Add(this.openLastStartupCheck);
 			this.startUpGroup.Controls.Add(this.newOnStartupCheck);
 			this.startUpGroup.Location = new System.Drawing.Point(12, 12);
 			this.startUpGroup.Name = "startUpGroup";
-			this.startUpGroup.Size = new System.Drawing.Size(318, 68);
+			this.startUpGroup.Size = new System.Drawing.Size(318, 93);
 			this.startUpGroup.TabIndex = 0;
 			this.startUpGroup.TabStop = false;
 			this.startUpGroup.Text = "Indításkor";
+			// 
+			// defaultOnStartupCheck
+			// 
+			this.defaultOnStartupCheck.AutoSize = true;
+			this.defaultOnStartupCheck.Checked = true;
+			this.defaultOnStartupCheck.Enabled = false;
+			this.defaultOnStartupCheck.Location = new System.Drawing.Point(6, 19);
+			this.defaultOnStartupCheck.Name = "defaultOnStartupCheck";
+			this.defaultOnStartupCheck.Size = new System.Drawing.Size(153, 17);
+			this.defaultOnStartupCheck.TabIndex = 0;
+			this.defaultOnStartupCheck.TabStop = true;
+			this.defaultOnStartupCheck.Text = "Alapértelmezett megnyitása";
+			this.defaultOnStartupCheck.UseVisualStyleBackColor = true;
 			// 
 			// backupSameDirCheck
 			// 
@@ -168,7 +183,7 @@
 			this.backupGroup.Controls.Add(this.browseBackupButton);
 			this.backupGroup.Controls.Add(this.backupSelectDirCheck);
 			this.backupGroup.Controls.Add(this.backupSameDirCheck);
-			this.backupGroup.Location = new System.Drawing.Point(12, 86);
+			this.backupGroup.Location = new System.Drawing.Point(12, 111);
 			this.backupGroup.Name = "backupGroup";
 			this.backupGroup.Size = new System.Drawing.Size(441, 103);
 			this.backupGroup.TabIndex = 2;
@@ -179,7 +194,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(544, 236);
+			this.ClientSize = new System.Drawing.Size(544, 261);
 			this.Controls.Add(this.backupGroup);
 			this.Controls.Add(this.okButton);
 			this.Controls.Add(this.cancelButton);
@@ -214,5 +229,6 @@
 		private System.Windows.Forms.NumericUpDown backupNumber;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.GroupBox backupGroup;
+		private System.Windows.Forms.RadioButton defaultOnStartupCheck;
 	}
 }

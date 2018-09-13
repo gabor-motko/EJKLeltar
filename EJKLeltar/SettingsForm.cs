@@ -21,10 +21,23 @@ namespace EJKLeltar
 
 		private void SettingsForm_Load(object sender, EventArgs e)
 		{
-			if (Settings.Default.OpenLast)
-				openLastStartupCheck.Checked = true;
-			else
-				newOnStartupCheck.Checked = true;
+			//if (Settings.Default.OpenLast)
+			//	openLastStartupCheck.Checked = true;
+			//else
+			//	newOnStartupCheck.Checked = true;
+
+			switch (Settings.Default.StartupLoad)
+			{
+				case 1:
+					openLastStartupCheck.Checked = true;
+					break;
+				case 2:
+					defaultOnStartupCheck.Checked = true;
+					break;
+				default:
+					newOnStartupCheck.Checked = true;
+					break;
+			}
 
 			if (Settings.Default.BackupPathSelect)
 				backupSelectDirCheck.Checked = true;
@@ -37,7 +50,8 @@ namespace EJKLeltar
 
 		private void okButton_Click(object sender, EventArgs e)
 		{
-			Settings.Default.OpenLast = openLastStartupCheck.Checked;
+			//Settings.Default.OpenLast = openLastStartupCheck.Checked;
+			Settings.Default.StartupLoad = defaultOnStartupCheck.Checked ? 2 : (openLastStartupCheck.Checked ? 1 : 0);
 			Settings.Default.BackupPathSelect = backupSelectDirCheck.Checked;
 			Settings.Default.BackupPath = backupSelectDirCheck.Checked ? backupPathText.Text : string.Empty;
 			Settings.Default.BackupCount = (int)backupNumber.Value;
