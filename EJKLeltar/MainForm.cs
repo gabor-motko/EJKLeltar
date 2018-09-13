@@ -611,6 +611,12 @@ namespace EJKLeltar
 					break;
 			}
 		}
+
+		// Check for updated version
+		private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Updater.DisplayVersion(Updater.GetGitHubVersion());
+		}
 		#endregion
 	}
 }

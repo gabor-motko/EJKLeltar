@@ -82,4 +82,62 @@ namespace EJKLeltar
 			}
 		}
 	}
+
+	public static class Updater
+	{
+		private const string _githubApiUrl = "https://api.github.com/repos/gabor-motko/ejkleltar/releases/latest";
+		private static readonly Regex _versionRegex = new Regex("\"tag_name\"[\\s:]*\"([\\d.]*)\"");
+
+		// Compare semantic version strings with the Major.Minor.Hotfix schema
+		private static int CompareSemvers(string a, string b)
+		{
+			try
+			{
+				string[] splitA = a.Split('.');
+				string[] splitB = b.Split('.');
+				int result;
+				if ((result = string.Compare(splitA[0], splitB[0])) != 0)
+					return result;
+				if ((result = string.Compare(splitA[1], splitB[1])) != 0)
+					return result;
+				if ((result = string.Compare(splitA[2], splitB[2])) != 0)
+					return result;
+				return 0;
+			}
+			catch
+			{
+				return -1;
+			}
+		}
+
+		// Get the latest version from GitHub
+		public static string GetGitHubVersion()
+		{
+			string ver = "1.0.0";
+
+			using (WebClient client = new WebClient())
+			{
+				ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+				client.Headers.Add(HttpRequestHeader.UserAgent, "EJKLeltar");
+				try
+				{
+					string data = client.DownloadString(_githubApiUrl);
+					ver = _versionRegex.Match(data).Value;
+				}
+				catch(Exception ex)
+				{
+					//MessageBox.Show(ex.ToString());
+				}
+			}
+
+			return ver;
+		}
+
+		public static void DisplayVersion(string latest)
+		{
+			string current = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
+			string result = CompareSemvers(current, latest) < 0 ? "Új frissítés elérhető." : "Nincs új frissítés.";
+			MessageBox.Show($"Jelenlegi verzió: {current}\nLegújabb verzió: {latest}\n\n{result}");
+		}
+	}
 }
