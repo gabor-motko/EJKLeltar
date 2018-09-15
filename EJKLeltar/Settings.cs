@@ -42,6 +42,18 @@ namespace EJKLeltar
 			public string BackupPath;
 			public int BackupCount;
 
+			public SettingsData()
+			{
+				FilePath = "leltar.ejk";
+				LastDir = ".";
+				StartupLoad = 2;
+				WindowSize = new Size();
+				Maximized = false;
+				BackupPathSelect = false;
+				BackupPath = ".";
+				BackupCount = 5;
+			}
+
 			public static void Serialize(SettingsData data, string path)
 			{
 				try
@@ -56,9 +68,9 @@ namespace EJKLeltar
 				catch (Exception ex)
 				{
 					if (ex is System.Security.SecurityException)
-						System.Windows.Forms.MessageBox.Show("A beállítások mentése sikertelen: hozzáférés megtagadva.", "Hozzáférés megtagadva", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+						MessageBox.Show("A beállítások mentése sikertelen: hozzáférés megtagadva.", "Hozzáférés megtagadva", MessageBoxButtons.OK, MessageBoxIcon.Error);
 					else
-						System.Windows.Forms.MessageBox.Show("A beállítások mentése sikertelen: " + ex.Message, "", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+						MessageBox.Show("A beállítások mentése sikertelen: " + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 			}
 
@@ -74,9 +86,10 @@ namespace EJKLeltar
 					stream.Close();
 					return o;
 				}
+				catch (FileNotFoundException){ }
 				catch (Exception ex)
 				{
-					System.Windows.Forms.MessageBox.Show(ex.ToString());
+					MessageBox.Show(ex.ToString());
 				}
 				return new SettingsData();
 			}
@@ -113,7 +126,7 @@ namespace EJKLeltar
 		// Get the latest version from GitHub
 		public static string GetGitHubVersion()
 		{
-			string ver = "1.0.0";
+			string ver = "undefined";
 
 			using (WebClient client = new WebClient())
 			{
@@ -124,7 +137,7 @@ namespace EJKLeltar
 					string data = client.DownloadString(_githubApiUrl);
 					ver = _versionRegex.Match(data).Value;
 				}
-				catch(Exception ex)
+				catch (Exception ex)
 				{
 					//MessageBox.Show(ex.ToString());
 				}
