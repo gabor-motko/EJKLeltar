@@ -12,10 +12,8 @@ namespace EJKLeltar
 {
 	public partial class SettingsForm : Form
 	{
-		private MainForm _main;
-		public SettingsForm(MainForm main)
+		public SettingsForm()
 		{
-			_main = main;
 			InitializeComponent();
 		}
 

@@ -33,8 +33,8 @@ namespace EJKLeltar
 
 			// Instantiate sub-forms
 			_aboutForm = new AboutForm();
-			_editForm = new EditForm(this);
-			_settingsForm = new SettingsForm(this);
+			_editForm = new EditForm();
+			_settingsForm = new SettingsForm();
 			_changeForm = new ChangeQuantityForm();
 
 			_ids = new HashSet<string>();
@@ -81,7 +81,7 @@ namespace EJKLeltar
 					inText.Text = inCount.ToString();
 					outText.Text = outCount.ToString();
 					totalText.Text = count.ToString();
-					commentText.Text = e["Comment"].InnerText.Replace('|', '\n');
+					commentText.Text = e["Comment"].InnerText.Replace("|", Environment.NewLine);
 				}
 				else
 				{
@@ -520,7 +520,10 @@ namespace EJKLeltar
 		// Edit book
 		private void editBookToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			_editForm.ShowDialog(_selected);
+			if(_editForm.ShowDialog(_selected) == DialogResult.OK)
+			{
+				SetChanged(true);
+			}
 			DisplayEntry(_selected);
 		}
 

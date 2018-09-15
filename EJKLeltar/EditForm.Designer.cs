@@ -53,6 +53,7 @@
 			this.titleText.Name = "titleText";
 			this.titleText.Size = new System.Drawing.Size(308, 20);
 			this.titleText.TabIndex = 0;
+			this.titleText.TextChanged += new System.EventHandler(this.Field_Changed);
 			// 
 			// label1
 			// 
@@ -69,7 +70,8 @@
 			this.idText.Location = new System.Drawing.Point(82, 38);
 			this.idText.Name = "idText";
 			this.idText.Size = new System.Drawing.Size(117, 20);
-			this.idText.TabIndex = 0;
+			this.idText.TabIndex = 1;
+			this.idText.TextChanged += new System.EventHandler(this.Field_Changed);
 			// 
 			// label2
 			// 
@@ -94,11 +96,14 @@
 			// 
 			// commentText
 			// 
+			this.commentText.AcceptsReturn = true;
 			this.commentText.Location = new System.Drawing.Point(82, 90);
 			this.commentText.Multiline = true;
 			this.commentText.Name = "commentText";
+			this.commentText.ShortcutsEnabled = false;
 			this.commentText.Size = new System.Drawing.Size(308, 101);
-			this.commentText.TabIndex = 0;
+			this.commentText.TabIndex = 5;
+			this.commentText.TextChanged += new System.EventHandler(this.Field_Changed);
 			// 
 			// label4
 			// 
@@ -120,7 +125,8 @@
             0});
 			this.countNumber.Name = "countNumber";
 			this.countNumber.Size = new System.Drawing.Size(79, 20);
-			this.countNumber.TabIndex = 2;
+			this.countNumber.TabIndex = 3;
+			this.countNumber.ValueChanged += new System.EventHandler(this.Field_Changed);
 			// 
 			// cancelButton
 			// 
@@ -129,7 +135,7 @@
 			this.cancelButton.Location = new System.Drawing.Point(294, 203);
 			this.cancelButton.Name = "cancelButton";
 			this.cancelButton.Size = new System.Drawing.Size(96, 23);
-			this.cancelButton.TabIndex = 3;
+			this.cancelButton.TabIndex = 7;
 			this.cancelButton.Text = "Cancel";
 			this.cancelButton.UseVisualStyleBackColor = true;
 			this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
@@ -140,7 +146,7 @@
 			this.okButton.Location = new System.Drawing.Point(192, 203);
 			this.okButton.Name = "okButton";
 			this.okButton.Size = new System.Drawing.Size(96, 23);
-			this.okButton.TabIndex = 3;
+			this.okButton.TabIndex = 6;
 			this.okButton.Text = "OK";
 			this.okButton.UseVisualStyleBackColor = true;
 			this.okButton.Click += new System.EventHandler(this.okButton_Click);
@@ -173,7 +179,8 @@
             0});
 			this.outNumber.Name = "outNumber";
 			this.outNumber.Size = new System.Drawing.Size(79, 20);
-			this.outNumber.TabIndex = 2;
+			this.outNumber.TabIndex = 4;
+			this.outNumber.ValueChanged += new System.EventHandler(this.Field_Changed);
 			// 
 			// subjectDrop
 			// 
@@ -181,7 +188,7 @@
 			this.subjectDrop.Location = new System.Drawing.Point(273, 38);
 			this.subjectDrop.Name = "subjectDrop";
 			this.subjectDrop.Size = new System.Drawing.Size(117, 21);
-			this.subjectDrop.TabIndex = 4;
+			this.subjectDrop.TabIndex = 2;
 			// 
 			// label7
 			// 
