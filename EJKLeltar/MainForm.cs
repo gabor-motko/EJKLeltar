@@ -617,6 +617,56 @@ namespace EJKLeltar
 		{
 			Updater.DisplayVersion(Updater.GetGitHubVersion());
 		}
+
+		// Convert from old format
+		private void convertOldToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog src = new OpenFileDialog()
+			{
+				Multiselect = false,
+				Filter = "XML dokumentum|*.xml|Minden fájl|*.*",
+				Title = "Régi dokumentum"
+			};
+			SaveFileDialog dst = new SaveFileDialog()
+			{
+				FileName = "leltar.ejk",
+				InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location),
+				Filter = "EJK dokumentum|*.ejk|XML dokumentum|*.xml|Minden fájl|*.*",
+				DefaultExt = "ejk",
+				Title = "Kimeneti dokumentum"
+			};
+			if(src.ShowDialog() == DialogResult.OK && dst.ShowDialog() == DialogResult.OK)
+			{
+				System.Diagnostics.Process conv = null;
+				try
+				{
+					 conv = System.Diagnostics.Process.Start("EJKConverter.exe", $"{src.FileName} {dst.FileName}");
+				}
+				catch(Exception ex)
+				{
+					MessageBox.Show("Sikertelen konvertálás: nem sikerült elindítani a folyamatot.\n\n" + ex.Message);
+					return;
+				}
+				conv.WaitForExit();
+				switch (conv.ExitCode)
+				{
+					case 0:
+						MessageBox.Show("A dokumentum sikeresen át lett konvertálva.");
+						LoadFile();
+						break;
+					case 2:
+						MessageBox.Show("Sikertelen konvertálás: fájlműveleti hiba.");
+						break;
+					case 3:
+						MessageBox.Show("Sikertelen konvertálás: XML hiba.");
+						break;
+					default:
+						MessageBox.Show("Sikertelen konvertálás: ismeretlen hiba.");
+						break;
+				}
+			}
+
+		}
 		#endregion
 	}
 }

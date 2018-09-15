@@ -48,7 +48,9 @@
 			this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.importOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.importDiffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.saveCopyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +68,7 @@
 			this.showHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+			this.convertOldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.titleText = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -216,7 +219,7 @@
             this.saveToolStripMenuItem,
             this.saveAsToolStripMenuItem,
             this.toolStripSeparator1,
-            this.importToolStripMenuItem,
+            this.importOptionsToolStripMenuItem,
             this.saveCopyToolStripMenuItem,
             this.toolStripSeparator8,
             this.exitToolStripMenuItem});
@@ -264,12 +267,28 @@
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(239, 6);
 			// 
+			// importOptionsToolStripMenuItem
+			// 
+			this.importOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importToolStripMenuItem,
+            this.importDiffToolStripMenuItem});
+			this.importOptionsToolStripMenuItem.Name = "importOptionsToolStripMenuItem";
+			this.importOptionsToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
+			this.importOptionsToolStripMenuItem.Text = "Beolvasás";
+			// 
 			// importToolStripMenuItem
 			// 
 			this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-			this.importToolStripMenuItem.Size = new System.Drawing.Size(242, 22);
-			this.importToolStripMenuItem.Text = "Importálás...";
+			this.importToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+			this.importToolStripMenuItem.Text = "Teljes dokumentumot...";
 			this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
+			// 
+			// importDiffToolStripMenuItem
+			// 
+			this.importDiffToolStripMenuItem.Enabled = false;
+			this.importDiffToolStripMenuItem.Name = "importDiffToolStripMenuItem";
+			this.importDiffToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+			this.importDiffToolStripMenuItem.Text = "Csak különbségeket...";
 			// 
 			// saveCopyToolStripMenuItem
 			// 
@@ -370,34 +389,42 @@
             this.showHelpToolStripMenuItem,
             this.aboutToolStripMenuItem,
             this.toolStripSeparator7,
+            this.convertOldToolStripMenuItem,
             this.updateToolStripMenuItem});
 			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
 			this.helpToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-			this.helpToolStripMenuItem.Text = "Súg&ó";
+			this.helpToolStripMenuItem.Text = "&Súgó";
 			// 
 			// showHelpToolStripMenuItem
 			// 
 			this.showHelpToolStripMenuItem.Enabled = false;
 			this.showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
-			this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.showHelpToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
 			this.showHelpToolStripMenuItem.Text = "Súgó";
 			// 
 			// aboutToolStripMenuItem
 			// 
 			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
 			this.aboutToolStripMenuItem.Text = "Névjegy";
 			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
 			// 
 			// toolStripSeparator7
 			// 
 			this.toolStripSeparator7.Name = "toolStripSeparator7";
-			this.toolStripSeparator7.Size = new System.Drawing.Size(114, 6);
+			this.toolStripSeparator7.Size = new System.Drawing.Size(229, 6);
+			// 
+			// convertOldToolStripMenuItem
+			// 
+			this.convertOldToolStripMenuItem.Name = "convertOldToolStripMenuItem";
+			this.convertOldToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+			this.convertOldToolStripMenuItem.Text = "Régi formátum konvertálása...";
+			this.convertOldToolStripMenuItem.Click += new System.EventHandler(this.convertOldToolStripMenuItem_Click);
 			// 
 			// updateToolStripMenuItem
 			// 
 			this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-			this.updateToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.updateToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
 			this.updateToolStripMenuItem.Text = "Frissítés";
 			this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
 			// 
@@ -728,9 +755,12 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
 		private System.Windows.Forms.ToolStripMenuItem saveCopyToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-		private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
 		private System.Windows.Forms.OpenFileDialog openDialog;
 		private System.Windows.Forms.SaveFileDialog saveDialog;
+		private System.Windows.Forms.ToolStripMenuItem importOptionsToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem importDiffToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem convertOldToolStripMenuItem;
 	}
 }
 
